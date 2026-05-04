@@ -18,33 +18,33 @@ export function Testimonials() {
   
   const [testimonials, setTestimonials] = useState<Testimonial[]>([
     {
-      quote: "I was very satisfied with the work. Always available and detail orientated. Thank you again",
-      author: "Christophe",
-      role: "Founder",
-      avatarUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop"
+      quote: "Same Education transformed my learning experience. The personalized approach and expert guidance helped me achieve my academic goals faster than I ever imagined.",
+      author: "Priya Sharma",
+      role: "Engineering Student",
+      avatarUrl: "https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=1974&auto=format&fit=crop"
     },
     {
-      quote: "Excellent designer! Very skilled and polite person. He was very attentive to my project and provided great results. Looking forward to working with him again!",
-      author: "Alex",
-      role: "Mobile Developer",
+      quote: "The quality of education and mentorship at Same Education is outstanding. Their innovative teaching methods made complex subjects accessible and engaging.",
+      author: "Rahul Kumar",
+      role: "Medical Student",
       avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop"
     },
     {
-      quote: "Rustam is very attentive and he has excellent design skills. He really understood my brief, produced some interesting concepts and then created a professional and beautiful logo. We worked together to make a few tweaks, and I am delighted with the final result. I would not hesitate to recommend him.",
-      author: "Craig",
-      role: "Founder & CEO",
+      quote: "As a working professional, Same Education helped me balance career and education perfectly. Their flexible scheduling and comprehensive support system made all the difference.",
+      author: "Anjali Patel",
+      role: "Software Engineer",
       avatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      quote: "Rustam is an incredible designer! This is the second project we have worked on together and hope to have many more. Quick communication, very fast turnaround, great attitude to feedback - you couldn't want anything better!",
-      author: "Thomas",
-      role: "CEO",
+      quote: "The career guidance and placement assistance from Same Education opened doors I never knew existed. Their network and expertise in the industry is unmatched.",
+      author: "Vikram Singh",
+      role: "MBA Graduate",
       avatarUrl: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=100&auto=format&fit=crop"
     },
     {
-      quote: "I've gone through a lot of designer profiles but Rustam knows what he is doing. Great job in his styles and editing.",
-      author: "Sameer",
-      role: "Founder",
+      quote: "Same Education doesn't just teach subjects - they build confidence and critical thinking skills. My daughter's academic performance improved dramatically after joining.",
+      author: "Mrs. Gupta",
+      role: "Parent",
       avatarUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop"
     }
   ]);
@@ -72,7 +72,7 @@ export function Testimonials() {
             TESTIMONIALS
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12">
-            35+ Happy Clients
+            Student Success Stories
           </h2>
         </motion.div>
 
