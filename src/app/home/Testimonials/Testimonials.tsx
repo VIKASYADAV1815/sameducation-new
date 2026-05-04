@@ -5,11 +5,18 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TestimonialCard } from "./TestimonialCard";
 
+type Testimonial = {
+  quote: string;
+  author: string;
+  role: string;
+  avatarUrl?: string;
+};
+
 export function Testimonials() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [newTestimonial, setNewTestimonial] = useState({ quote: "", author: "", role: "" });
+  const [newTestimonial, setNewTestimonial] = useState<Testimonial>({ quote: "", author: "", role: "" });
   
-  const [testimonials, setTestimonials] = useState([
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([
     {
       quote: "I was very satisfied with the work. Always available and detail orientated. Thank you again",
       author: "Christophe",
