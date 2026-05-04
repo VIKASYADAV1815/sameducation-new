@@ -1,0 +1,100 @@
+[10:43:14.675] [INFO] [36mInitializing Storybook[39m
+[10:43:15.477] [DEBUG] Getting package.json info for D:/vikas-codes/sameducation/package.json...
+[10:43:15.477] [DEBUG] Getting CLI versions from NPM for storybook...
+[10:43:15.478] [DEBUG] Executing command: npm info storybook version
+[10:43:17.308] [INFO] Adding Storybook version 10.3.6 to your project
+[10:43:17.313] [DEBUG] Project type detected: nextjs
+[10:43:17.313] [DEBUG] Using cached package.json for D:\vikas-codes\sameducation\package.json...
+[10:43:17.321] [INFO] Framework detected: nextjs-vite
+[10:43:17.322] [DEBUG] Getting installed version for vitest...
+[10:43:17.324] [DEBUG] Executing command: npm ls --json --depth=99 2>NUL
+[10:43:18.876] [DEBUG] Executing command: npm ls --json --depth=0 2>NUL
+[10:43:20.262] [DEBUG] Error finding installations for vitest: ExecaError: Command failed with exit code 1: npm.cmd ls --json "--depth=0" "2>NUL"
+
+npm error code EINVALIDTAGNAME
+npm error Invalid tag name "2>NUL" of package "2>NUL": Tags may not have any characters that encodeURIComponent encodes.
+npm error A complete log of this run can be found in: D:\npm-cache\_logs\2026-05-04T05_13_19_296Z-debug-0.log
+
+{
+  "error": {
+    "code": "EINVALIDTAGNAME",
+    "summary": "Invalid tag name \"2>NUL\" of package \"2>NUL\": Tags may not have any characters that encodeURIComponent encodes.",
+    "detail": ""
+  }
+}
+[10:43:20.262] [DEBUG] No installations found for vitest
+[10:43:20.262] [DEBUG] Getting installed version for msw...
+[10:43:20.262] [DEBUG] Executing command: npm ls --json --depth=99 2>NUL
+[10:43:21.744] [DEBUG] Executing command: npm ls --json --depth=0 2>NUL
+[10:43:23.373] [DEBUG] Error finding installations for msw: ExecaError: Command failed with exit code 1: npm.cmd ls --json "--depth=0" "2>NUL"
+
+npm error code EINVALIDTAGNAME
+npm error Invalid tag name "2>NUL" of package "2>NUL": Tags may not have any characters that encodeURIComponent encodes.
+npm error A complete log of this run can be found in: D:\npm-cache\_logs\2026-05-04T05_13_22_185Z-debug-0.log
+
+{
+  "error": {
+    "code": "EINVALIDTAGNAME",
+    "summary": "Invalid tag name \"2>NUL\" of package \"2>NUL\": Tags may not have any characters that encodeURIComponent encodes.",
+    "detail": ""
+  }
+}
+[10:43:23.373] [DEBUG] No installations found for msw
+[10:43:23.386] [INFO] base-generator-task-start: Generating Storybook configuration
+[10:43:23.387] [DEBUG] Using cached package.json for D:\vikas-codes\sameducation\package.json...
+[10:43:23.387] [DEBUG] Using cached package.json for D:\vikas-codes\sameducation\package.json...
+[10:43:23.387] [DEBUG] Using cached package.json for D:\vikas-codes\sameducation\package.json...
+[10:43:23.389] [INFO] base-generator-task: - Configuring ESLint plugin
+[10:43:23.390] [DEBUG] Detected flat config at D:\vikas-codes\sameducation\eslint.config.mjs
+[10:43:23.470] [DEBUG] Using cached version for storybook...
+[10:43:23.470] [DEBUG] Getting CLI versions from NPM for @storybook/nextjs-vite...
+[10:43:23.470] [DEBUG] Executing command: npm info @storybook/nextjs-vite version
+[10:43:23.511] [DEBUG] Getting CLI versions from NPM for @chromatic-com/storybook...
+[10:43:23.511] [DEBUG] Executing command: npm info @chromatic-com/storybook version
+[10:43:23.556] [DEBUG] Getting CLI versions from NPM for @storybook/addon-vitest...
+[10:43:23.556] [DEBUG] Executing command: npm info @storybook/addon-vitest version
+[10:43:23.605] [DEBUG] Getting CLI versions from NPM for @storybook/addon-a11y...
+[10:43:23.605] [DEBUG] Executing command: npm info @storybook/addon-a11y version
+[10:43:23.658] [DEBUG] Getting CLI versions from NPM for @storybook/addon-docs...
+[10:43:23.658] [DEBUG] Executing command: npm info @storybook/addon-docs version
+[10:43:23.717] [DEBUG] Getting CLI versions from NPM for @storybook/addon-onboarding...
+[10:43:23.717] [DEBUG] Executing command: npm info @storybook/addon-onboarding version
+[10:43:23.795] [DEBUG] Getting CLI versions from NPM for vite...
+[10:43:23.795] [DEBUG] Executing command: npm info vite version
+[10:43:23.861] [DEBUG] Getting CLI versions from NPM for eslint-plugin-storybook...
+[10:43:23.861] [DEBUG] Executing command: npm info eslint-plugin-storybook version
+[10:43:29.405] [INFO] base-generator-task: - Configuring main.ts
+[10:43:29.411] [INFO] base-generator-task: - Configuring preview.ts
+[10:43:29.415] [INFO] base-generator-task: - Adding Storybook command to package.json
+[10:43:29.416] [DEBUG] Getting package.json info for D:/vikas-codes/sameducation/package.json...
+[10:43:29.416] [DEBUG] Using cached package.json for D:\vikas-codes\sameducation\package.json...
+[10:43:29.417] [DEBUG] Using cached package.json for D:\vikas-codes\sameducation\package.json...
+[10:43:29.418] [INFO] base-generator-task: - Copying framework templates
+[10:43:29.484] [DEBUG] Executing command: npm config get registry -ws=false -iwr
+[10:43:30.877] [ERROR] [38;2;241;97;97mError: Cannot find @storybook\nextjs-vite\package.json, Error: Cannot find module '@storybook/nextjs-vite/package.json'
+Require stack:
+- .
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)
+    at require.resolve (node:internal/modules/helpers:163:19)
+    at resolvePackageDir (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/storybook/dist/_node-chunks/chunk-OWMIR4VJ.js:725:26)
+    at getRendererDir (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/storybook/dist/_node-chunks/chunk-M6BD6GI2.js:5401:12)
+    at templatePath (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/storybook/dist/_node-chunks/chunk-M6BD6GI2.js:5484:25)
+    at copyTemplateFiles (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/storybook/dist/_node-chunks/chunk-M6BD6GI2.js:5499:23)
+    at async baseGenerator (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/create-storybook/dist/_node-chunks/chunk-VQR5SPKR.js:1298:152)
+    at async GeneratorExecutionCommand.executeProjectGenerator (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/create-storybook/dist/_node-chunks/chunk-VQR5SPKR.js:1366:101)
+    at async GeneratorExecutionCommand.execute (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/create-storybook/dist/_node-chunks/chunk-VQR5SPKR.js:1388:27)
+    at async doInitiate (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/create-storybook/dist/_node-chunks/chunk-VQR5SPKR.js:2886:68)
+
+Error: ENOSPC: no space left on device, open 'C:\Users\devel\AppData\Local\Temp\b77c0cf3be87ed96b12001b4ee1b9027\package\dist\_browser-chunks\react-18-PYSEDAWB.js'[39m
+    at getRendererDir (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/storybook/dist/_node-chunks/chunk-M6BD6GI2.js:5410:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async templatePath (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/storybook/dist/_node-chunks/chunk-M6BD6GI2.js:5484:19)
+    at async copyTemplateFiles (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/storybook/dist/_node-chunks/chunk-M6BD6GI2.js:5499:17)
+    at async baseGenerator (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/create-storybook/dist/_node-chunks/chunk-VQR5SPKR.js:1298:152)
+    at async GeneratorExecutionCommand.executeProjectGenerator (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/create-storybook/dist/_node-chunks/chunk-VQR5SPKR.js:1366:101)
+    at async GeneratorExecutionCommand.execute (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/create-storybook/dist/_node-chunks/chunk-VQR5SPKR.js:1388:27)
+    at async doInitiate (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/create-storybook/dist/_node-chunks/chunk-VQR5SPKR.js:2886:68)
+    at async file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/create-storybook/dist/_node-chunks/chunk-VQR5SPKR.js:2928:20
+    at async withTelemetry (file:///D:/npm-cache/_npx/a5054e465ccef707/node_modules/storybook/dist/_node-chunks/chunk-UYONHJJP.js:225:12)
+[10:44:52.769] [PROMPT] Would you like to send anonymous crash reports to improve Storybook and fix bugs faster? {"choice":true}
+[10:44:52.773] [INFO] Storybook collects completely anonymous usage telemetry. We use it to shape Storybook's roadmap and prioritize features. You can learn more, including how to opt out, at https://storybook.js.org/telemetry
