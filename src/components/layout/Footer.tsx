@@ -18,12 +18,8 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
           {/* Brand Column */}
           <div className="md:col-span-4 lg:col-span-3">
-            <Link href="/" className="flex flex-col mb-6 text-white">
-              <svg className="w-10 h-10 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 2L2 22h20L12 2z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 10l-4 8h8l-4-8z" />
-              </svg>
-              <span className="text-sm font-medium tracking-[0.2em] uppercase">Sameducation</span>
+            <Link href="/" className="flex items-center mb-6 text-white">
+              <div className="w-24 h-24 bg-center bg-no-repeat bg-contain" style={{ backgroundImage: "url('/logo.png')" }} aria-label="SAM Education logo" />
             </Link>
             <p className="text-[12px] font-medium leading-relaxed tracking-wider mb-8 text-white/50 uppercase">
               Navigate your academic journey seamlessly. Get expert university admissions and study abroad consulting with guaranteed worldwide support.

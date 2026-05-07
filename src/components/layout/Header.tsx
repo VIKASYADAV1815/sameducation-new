@@ -25,15 +25,11 @@ export const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 pt-6 px-6 md:px-12 lg:px-16 flex items-start justify-between pointer-events-none">
+    <header className={`fixed top-0 w-full z-50 ${isScrolled ? "pt-3" : "pt-4"} px-6 md:px-12 lg:px-16 flex items-center justify-between pointer-events-none`}>
       {/* Logo Area - Floating Box */}
-      <div className={`pointer-events-auto transition-all duration-500 rounded-sm ${isScrolled ? "bg-transparent p-4" : "bg-transparent p-2"}`}>
-        <Link href="/" className="flex flex-col items-center justify-center">
-          <svg className={`w-8 h-8 mb-1 transition-colors ${isScrolled ? "text-slate-900" : "text-white"}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 2L2 22h20L12 2z" />
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 10l-4 8h8l-4-8z" />
-          </svg>
-          <span className={`text-[10px] font-medium tracking-[0.2em] uppercase transition-colors ${isScrolled ? "text-slate-900" : "text-white"}`}>Sameducation</span>
+      <div className={`pointer-events-auto transition-all duration-500 rounded-sm ${isScrolled ? "bg-transparent p-2" : "bg-transparent p-1"}`}>
+        <Link href="/" className="flex items-center justify-center">
+          <div className="w-24 h-24 bg-center bg-no-repeat bg-contain" style={{ backgroundImage: "url('/logo.png')" }} aria-label="SAM Education logo" />
         </Link>
       </div>
 

@@ -1,0 +1,23 @@
+<svg width="240" height="120" viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wingGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(20, 10)">
+    <path d="M20 18C20 8.059 30.059-2 40-2C49.941-2 60.0 8.059 60 18C60 27.941 44.118 52.294 40 56C35.882 52.294 20 27.941 20 18Z" fill="#0F172A" opacity="0.9" />
+    <path d="M100 18C100 8.059 110.059-2 120-2C129.941-2 140.0 8.059 140 18C140 27.941 124.118 52.294 120 56C115.882 52.294 100 27.941 100 18Z" fill="#0F172A" opacity="0.9" />
+    <path d="M80 0C83.866 0 87 3.134 87 7V27C87 30.866 83.866 34 80 34C76.134 34 73 30.866 73 27V7C73 3.134 76.134 0 80 0Z" fill="#0F172A" />
+    <path d="M80 34V76" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+    <path d="M70 46C70 41.588 73.588 38 78 38H82C86.412 38 90 41.588 90 46V60C90 64.412 86.412 68 82 68H78C73.588 68 70 64.412 70 60V46Z" fill="#0F172A" />
+    <path d="M63 68C63 69.657 64.343 71 66 71H94C95.657 71 97 69.657 97 68V63C97 61.343 95.657 60 94 60H66C64.343 60 63 61.343 63 63V68Z" fill="url(#wingGradient)" opacity="0.85" />
+    <path d="M72 40C72 32.268 76.087 26 80 26C83.913 26 88 32.268 88 40V68" stroke="#0F172A" stroke-width="4" stroke-linecap="round" />
+    <path d="M80 68L72 78" stroke="#0F172A" stroke-width="4" stroke-linecap="round" />
+    <path d="M80 68L88 78" stroke="#0F172A" stroke-width="4" stroke-linecap="round" />
+    <path d="M0 82C0 82 24 70 40 70C56 70 80 82 80 82" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+    <path d="M160 82C160 82 136 70 120 70C104 70 80 82 80 82" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+  </g>
+  <text x="120" y="62" fill="#075985" font-family="Inter, sans-serif" font-size="32" font-weight="700">SAM</text>
+  <text x="120" y="92" fill="#0F172A" font-family="Caveat, cursive" font-size="30">Education</text>
+</svg>
