@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -86,7 +86,7 @@ export function Hero() {
       </div>
 
       {/* Stats Block Bottom Right */}
-      <div className="absolute bottom-0 right-0 w-full md:w-auto bg-[#1a232c]/80 backdrop-blur-sm">
+      <div className="absolute bottom-0 right-0 w-full md:w-auto bg-[#1a232c]/80 backdrop-blur-sm hidden md:block">
         <div className="flex flex-col sm:flex-row px-8 py-10 md:px-12 md:py-12 gap-10 md:gap-16">
           <div className="flex flex-col">
             <div className="flex items-start">
