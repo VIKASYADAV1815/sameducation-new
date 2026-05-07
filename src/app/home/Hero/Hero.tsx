@@ -1,128 +1,116 @@
 "use client";
 
 import * as React from "react";
-import { motion } from "framer-motion";
-import { HeroButton } from "./HeroButton";
-import { HeroHeadline } from "./HeroHeadline";
+import { motion, AnimatePresence } from "framer-motion";
+
+const slides = [
+    {
+      src: "https://images.unsplash.com/photo-1544717305-996b815c338c?q=80&w=1920&auto=format&fit=crop",
+      title: "Study in Germany",
+      subtitle: "Bachelors • Masters • Ausbildung • Opportunity Card",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1920&auto=format&fit=crop",
+      title: "MBBS in Central America",
+      subtitle: "Affordable medical degrees with global recognition",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1517520287167-4bbf64a00d66?q=80&w=1920&auto=format&fit=crop",
+      title: "MS • MD • MDS",
+      subtitle: "Postgraduate medical admissions made seamless",
+    },
+  ];
 
 export function Hero() {
+  const [activeSlide, setActiveSlide] = React.useState(0);
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % slides.length);
+    }, 5000); // Auto carousel every 5 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-white">
-      {/* Refined Background - Subtle & Sharp */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-[10%] -right-[5%] w-[40%] h-[50%] bg-gradient-to-br from-blue-50/50 to-purple-50/50 blur-[120px] rounded-full" />
-        <div 
-          className="absolute inset-0 opacity-[0.015]" 
-          style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000' fill-opacity='1'%3E%3Cpath d='M0 0h1v1H0z'/%3E%3C/g%3E%3C/svg%3E")` }} 
+    <section className="relative h-screen w-full overflow-hidden flex items-center bg-slate-900 font-sans">
+      {/* Background Carousel */}
+      <AnimatePresence>
+        <motion.img
+          key={activeSlide}
+          src={slides[activeSlide].src}
+          alt={slides[activeSlide].title}
+          className="absolute inset-0 w-full h-full object-cover"
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2 }}
         />
+      </AnimatePresence>
+
+      {/* Dark Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/40" />
+
+      {/* Main Content */}
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 flex flex-col justify-end h-full pb-20 md:pb-32">
+        <div className="max-w-3xl">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-medium leading-[1.1] text-white tracking-tight uppercase"
+          >
+            Turn Your Study<br />Abroad Dream<br />Into Reality
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-6 text-lg sm:text-xl text-white/90 max-w-2xl font-light leading-relaxed"
+          >
+            Expert guidance for Germany (Bachelors, Masters, Ausbildung, Opportunity Card), MBBS in Central America, and MS/MD/MDS. 
+            From licensure applications to airport transfers — we've got you covered.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-10"
+          >
+            <button className="px-8 py-4 bg-white text-slate-900 font-medium text-[15px] tracking-wide hover:bg-gray-100 transition-colors uppercase">
+              Get Free Consultation
+            </button>
+          </motion.div>
+        </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          
-          {/* Left: Focused Content */}
-          <div className="w-full lg:max-w-2xl">
-            <motion.div 
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200 mb-8"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-              <span className="text-[11px] font-bold tracking-wider text-slate-600 uppercase">Expert Guidance 2026</span>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <HeroHeadline
-                title="Global Education Strategy."
-                highlight="Simplified."
-                subtitle="Expert university admissions and study abroad consulting. We provide the roadmap to your academic future with precision and worldwide support."
-              />
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-10 flex items-center gap-5"
-            >
-              <HeroButton className="h-12 px-8 rounded-lg shadow-sm hover:shadow-md transition-all font-semibold">
-                Get Started
-              </HeroButton>
-              <button className="group flex items-center gap-2 text-sm font-bold text-slate-600 hover:text-primary transition-colors">
-                View Success Stories
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </button>
-            </motion.div>
+      {/* Stats Block Bottom Right */}
+      <div className="absolute bottom-0 right-0 w-full md:w-auto bg-[#1a232c]/80 backdrop-blur-sm">
+        <div className="flex flex-col sm:flex-row px-8 py-10 md:px-12 md:py-12 gap-10 md:gap-16">
+          <div className="flex flex-col">
+            <div className="flex items-start">
+              <span className="text-5xl md:text-6xl font-light text-white">1200</span>
+              <span className="text-2xl md:text-3xl font-light text-white mt-1">+</span>
+            </div>
+            <span className="text-white/70 text-xs tracking-widest uppercase mt-4">Students Placed</span>
           </div>
 
-          {/* Right: Sharp Professional Visuals */}
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="w-full lg:w-5/12 relative"
-          >
-            {/* The "Centerpiece" Card */}
-            <div className="relative bg-slate-50 rounded-2xl p-2 ring-1 ring-slate-200 shadow-2xl">
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-white">
-                <img
-                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop"
-                  alt="Education Success"
-                  className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
-                />
-              </div>
-
-              {/* Floating Status - "The Micro-UI" */}
-              <motion.div 
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -right-6 top-12 bg-white ring-1 ring-slate-200 p-4 rounded-xl shadow-lg flex items-center gap-3"
-              >
-                <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Application Status</p>
-                  <p className="text-sm font-bold text-slate-900 leading-none">Accepted</p>
-                </div>
-              </motion.div>
-
-              <motion.div 
-                animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute -left-6 bottom-12 bg-white ring-1 ring-slate-200 p-4 rounded-xl shadow-lg"
-              >
-                <div className="flex items-center gap-2 mb-1">
-                  <div className="flex -space-x-1.5">
-                    {[
-                      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=100&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop"
-                    ].map((src, i) => (
-                      <img 
-                        key={i} 
-                        src={src} 
-                        alt="User" 
-                        className="h-6 w-6 rounded-full border-2 border-white bg-slate-200 object-cover" 
-                      />
-                    ))}
-                  </div>
-                  <span className="text-xs font-bold text-slate-900 ml-1">4.9/5</span>
-                </div>
-                <p className="text-[9px] font-bold text-slate-400 uppercase tracking-tight">Trust Score</p>
-              </motion.div>
+          <div className="flex flex-col">
+            <div className="flex items-start">
+              <span className="text-5xl md:text-6xl font-light text-white">4.9</span>
+              <span className="text-xl font-light text-white mt-2 ml-1">/5</span>
             </div>
-          </motion.div>
+            <span className="text-white/70 text-xs tracking-widest uppercase mt-4">Success Rating</span>
+          </div>
 
+          <div className="flex flex-col">
+            <div className="flex items-start">
+              <span className="text-5xl md:text-6xl font-light text-white">10</span>
+              <span className="text-xl font-light text-white mt-2 ml-2">YRS</span>
+            </div>
+            <span className="text-white/70 text-xs tracking-widest uppercase mt-4">Migration Expertise</span>
+          </div>
         </div>
       </div>
     </section>

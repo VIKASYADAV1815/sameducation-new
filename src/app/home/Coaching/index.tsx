@@ -3,10 +3,12 @@ import Link from "next/link";
 
 export const Coaching = () => {
   const coachingOptions = [
-    "IELTS", "PTE-Academic", "PTE-Core",
-    "TOEFL", "German", "CELPIP",
-    "OET", "Duolingo English Test", "Register for Free Demo",
-    "Coaching Demo Videos"
+    "GERMANY",
+    "Bachelors/Masters",
+    "AUSBILDUNG",
+    "OPPORTUNITY CARD",
+    "MBBS in Central America",
+    "MS/MD/MDS"
   ];
 
   return (
@@ -29,8 +31,8 @@ export const Coaching = () => {
             <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
             <div className="h-full border-[1px] border-blue-400/50 p-1 rounded-lg">
               <div className="h-full border-[1px] border-blue-400/30 rounded-lg p-6 md:p-10 relative z-10 flex flex-col justify-center">
-                <h2 className="text-3xl font-bold mb-2">Coaching</h2>
-                <p className="text-blue-100 mb-8 text-lg">Ace your scores with our expert coaching services</p>
+                <h2 className="text-3xl font-bold mb-2">Germany and Medical Pathways</h2>
+                <p className="text-blue-100 mb-8 text-lg">Choose the exact pathway your client requested and get focused coaching support.</p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {coachingOptions.map((option, index) => (

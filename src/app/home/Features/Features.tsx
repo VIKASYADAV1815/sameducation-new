@@ -22,13 +22,13 @@ export function Features() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold font-heading text-primary mb-6">
-              Why Choose SAMEDUCATION Experts?
+              Germany and Medical Study Paths, Simplified
             </h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              With a team of seasoned educational consultants, we guide you through complex university admissions and visa processes. We provide clear, comprehensive strategies for studying abroad tailored specifically to your academic profile and career aspirations.
+              We focus on the exact pathways your client requested: Germany Bachelors/Masters, AUSBILDUNG, Opportunity Card, MBBS in Central America, and MS/MD/MDS.
             </p>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Our transparent and stress-free approach ensures that your journey from application to arrival is smooth. We handle the intricacies of documentation, so you can focus on preparing for your global education.
+              Our team delivers clear application guidance and reliable support for admissions, documentation, and program selection without the extras.
             </p>
             <button className="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-hover transition-colors shadow-lg shadow-primary/25">
               Discover Our Services

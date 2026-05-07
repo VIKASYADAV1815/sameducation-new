@@ -8,70 +8,68 @@ export const FAQ = () => {
 
   const faqs = [
     {
-      question: "What services do you provide?",
-      answer: "We offer end-to-end guidance for study visas, permanent residency (PR), work visas, business visas, and specialized language coaching like IELTS, PTE, and TOEFL."
+      question: "What exact pathways does SAMEDUCATION support?",
+      answer: "We support the client-requested pathways only: GERMANY, Bachelors/Masters, AUSBILDUNG, OPPORTUNITY CARD, MBBS in Central America, and MS/MD/MDS."
     },
     {
-      question: "Which countries do you help students and professionals migrate to?",
-      answer: "We primarily assist with applications for top destinations including Canada, Australia, the United Kingdom, the United States, Germany, and several other European nations."
+      question: "Do you provide Job Placement Assistance?",
+      answer: "Yes. We help you find both part-time and full-time job opportunities through our international network, which is particularly beneficial for Opportunity Card candidates."
     },
     {
-      question: "How long does the visa application process typically take?",
-      answer: "Processing times vary significantly based on the destination country and visa type. However, our streamlined process ensures your application is filed flawlessly and as quickly as possible to minimize delays."
-    },
-    {
-      question: "Do you offer test preparation or coaching?",
-      answer: "Yes! We provide expert coaching for IELTS, PTE-Academic, PTE-Core, TOEFL, CELPIP, OET, and German Language. We even offer free demo classes so you can experience our teaching quality."
-    },
-    {
-      question: "Can you guarantee that my visa will be approved?",
-      answer: "While no consultant can legally guarantee a visa approval, we proudly maintain a 99% success rate. Our thorough evaluation and meticulous application process give you the highest possible chance of success."
+      question: "Is accommodation assistance included in your services?",
+      answer: "Absolutely. We assist you in finding safe and comfortable housing arrangements leveraging our large alumni network.",
     }
   ];
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 bg-slate-50 font-sans border-b border-gray-200 overflow-hidden">
+      {/* Background Image with low opacity */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1545679216-ad934fececb0?q=80&w=1170&auto=format&fit=crop" 
+          alt="Background" 
+          className="w-full h-full object-cover opacity-[0.10] grayscale"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-50/90 via-slate-50/60 to-slate-50/90" />
+      </div>
+
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="inline-block py-1 px-4 rounded-full bg-blue-50 text-blue-600 text-xs font-bold tracking-widest uppercase mb-4">
-            Got Questions?
+          <span className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block">
+            [ GOT QUESTIONS? ]
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase max-w-3xl mx-auto text-slate-900 mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-gray-600">
-            Find answers to the most common questions about our services and the immigration process.
+          <p className="text-sm font-medium tracking-wider text-gray-500 uppercase">
+            Find answers to the most common questions about the Germany and medical study pathways featured on this page.
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-0 border-t border-gray-200">
           {faqs.map((faq, index) => {
             const isActive = activeIndex === index;
 
             return (
               <div 
                 key={index} 
-                className={`border rounded-2xl overflow-hidden transition-all duration-300 ${
-                  isActive ? "border-primary/50 bg-blue-50/30 shadow-md" : "border-gray-200 bg-white hover:border-gray-300"
-                }`}
+                className="border-b border-gray-200 bg-transparent backdrop-blur-sm"
               >
                 <button
-                  className="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none"
+                  className="w-full py-6 text-left flex justify-between items-center focus:outline-none group"
                   onClick={() => setActiveIndex(isActive ? null : index)}
                 >
-                  <span className={`font-semibold text-lg pr-4 ${isActive ? "text-primary" : "text-gray-900"}`}>
+                  <span className={`text-[13px] font-semibold tracking-wider uppercase transition-colors pr-4 ${isActive ? "text-blue-600" : "text-slate-900 group-hover:text-blue-600"}`}>
                     {faq.question}
                   </span>
-                  <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-                    isActive ? "bg-primary text-white" : "bg-gray-100 text-gray-500"
-                  }`}>
+                  <div className={`shrink-0 text-gray-400 transition-colors ${isActive ? "text-blue-600" : "group-hover:text-blue-600"}`}>
                     <svg 
                       className={`w-5 h-5 transition-transform duration-300 ${isActive ? "rotate-180" : ""}`} 
                       fill="none" 
                       viewBox="0 0 24 24" 
                       stroke="currentColor"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
                 </button>
@@ -84,7 +82,7 @@ export const FAQ = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                      <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100/0">
+                      <div className="pb-8 text-[12px] font-medium tracking-wider text-gray-500 leading-relaxed uppercase">
                         {faq.answer}
                       </div>
                     </motion.div>

@@ -59,19 +59,29 @@ export function Testimonials() {
   };
 
   return (
-    <section className="py-24 bg-gray-50/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="relative py-32 bg-slate-50 overflow-hidden border-b border-gray-200">
+      {/* Background Image with low opacity */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1675445991060-14c7f43d8fd6?q=80&w=1074&auto=format&fit=crop" 
+          alt="Background" 
+          className="w-full h-full object-cover opacity-[0.08] grayscale"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-50/90 via-slate-50/60 to-slate-50/90" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-12"
+          className="mb-16"
         >
-          <span className="inline-block py-1 px-4 rounded-full bg-gray-200 text-gray-700 text-xs font-bold tracking-widest uppercase mb-4">
-            TESTIMONIALS
+          <span className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block">
+            [ TESTIMONIALS ]
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12">
+          <h2 className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase max-w-3xl mx-auto text-slate-900">
             Student Success Stories
           </h2>
         </motion.div>

@@ -3,8 +3,12 @@ import Link from "next/link";
 
 export const GlobalIndian = () => {
   const links = [
-    "Stories", "The Global Indian Book",
-    "Tell Your Story", "Top 100 Global Indians"
+    "GERMANY",
+    "Bachelors/Masters",
+    "AUSBILDUNG",
+    "OPPORTUNITY CARD",
+    "MBBS in Central America",
+    "MS/MD/MDS"
   ];
 
   return (
@@ -17,11 +21,11 @@ export const GlobalIndian = () => {
           {/* Content Side */}
           <div className="lg:w-1/2 relative z-10 pl-4 lg:pl-8 pt-8 lg:pt-0">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 relative inline-block">
-              Global Indian
+              Germany & Medical Program Focus
               <span className="absolute bottom-0 left-0 w-1/2 h-1 bg-red-500 rounded-full" />
             </h2>
             <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-              We highlight Indians and stakeholders who shape the identity and perception of India and Indians abroad, while showcasing cross-border journeys of Indians who found their purpose and chose to give back.
+              Only the exact pathways your client shared: GERMANY, Bachelors/Masters, AUSBILDUNG, OPPORTUNITY CARD, MBBS in Central America, MS/MD/MDS.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {links.map((link, index) => (

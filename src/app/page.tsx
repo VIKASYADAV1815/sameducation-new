@@ -2,11 +2,11 @@ import { Metadata } from "next";
 import { Hero, Features, Testimonials, CTA, Coaching, Study, ConsultantInfo, GlobalIndian, FAQ } from "./home";
 
 export const metadata: Metadata = {
-  title: "SAMEDUCATION | Premium Educational Guidance & Study Abroad Services",
-  description: "Navigate your academic journey seamlessly. Get expert university admissions and study abroad consulting with guaranteed worldwide support.",
+  title: "SAMEDUCATION | Germany & Medical Study Guidance",
+  description: "Focused support for Germany Bachelors/Masters, AUSBILDUNG, Opportunity Card, MBBS in Central America, and MS/MD/MDS admissions.",
   openGraph: {
-    title: "SAMEDUCATION | Premium Educational Guidance",
-    description: "Expert educational guidance and admissions support.",
+    title: "SAMEDUCATION | Germany & Medical Study Guidance",
+    description: "Focused support for Germany Bachelors/Masters, AUSBILDUNG, Opportunity Card, MBBS in Central America, and MS/MD/MDS admissions.",
     url: "https://sameducation.com",
     siteName: "SAMEDUCATION",
     images: [
@@ -45,10 +45,7 @@ export default function HomePage() {
       <main className="min-h-screen bg-white">
         <Hero />
         <ConsultantInfo />
-        <GlobalIndian />
-        <Coaching />
         <Study />
-        <Features />
         <Testimonials />
         <FAQ />
         <CTA />
