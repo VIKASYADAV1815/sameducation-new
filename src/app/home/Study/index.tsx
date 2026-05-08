@@ -6,27 +6,35 @@ export const Study = () => {
   const pathways = [
     {
       id: "01",
-      title: "GERMANY",
-      subtitle: "(BACHELORS/MASTERS/AUSBILDUNG)",
-      desc: "FULL SUPPORT FOR YOUR STUDY JOURNEY IN GERMANY, FROM COURSE SELECTION TO VISA APPROVAL.",
-      img: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=800&auto=format&fit=crop",
-      link: "/study/germany"
+      title: "NURSING IN CANADA & UK",
+      subtitle: "(STUDY & WORK)",
+      desc: "ADVANCE YOUR NURSING CAREER WITH GLOBAL OPPORTUNITIES. STUDY AND WORK AS A NURSE IN CANADA OR THE UK.",
+      img: "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=800&auto=format&fit=crop",
+      link: "/nursing"
     },
     {
       id: "02",
-      title: "MBBS IN CENTRAL AMERICA",
-      subtitle: "(GLOBAL RECOGNITION)",
-      desc: "AFFORDABLE MEDICAL DEGREES WITH GLOBAL RECOGNITION. START YOUR JOURNEY TO BECOMING A DOCTOR.",
+      title: "MBBS ABROAD & INDIA",
+      subtitle: "(CENTRAL AMERICA & EUROPE)",
+      desc: "PURSUE YOUR MEDICAL DEGREE WITH EXCLUSIVE OPPORTUNITIES IN CENTRAL AMERICA, EUROPE, AND INDIA.",
       img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop",
-      link: "/study/mbbs"
+      link: "/mbbs"
     },
     {
       id: "03",
+      title: "MEDICAL PG IN GERMANY",
+      subtitle: "(MISSION GERMANY)",
+      desc: "SPECIALIZE IN GERMANY WITH FULL SUPPORT FOR YOUR POSTGRADUATE MEDICAL JOURNEY.",
+      img: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=800&auto=format&fit=crop",
+      link: "/pg-germany"
+    },
+    {
+      id: "04",
       title: "MS / MD / MDS",
       subtitle: "(POSTGRADUATE MEDICAL)",
       desc: "POSTGRADUATE MEDICAL ADMISSIONS MADE SEAMLESS. SECURE YOUR SPECIALIZATION.",
       img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop",
-      link: "/study/ms-md-mds"
+      link: "/ms-md-mds"
     }
   ];
 
@@ -73,6 +81,7 @@ export const Study = () => {
                   src={item.img}
                   alt={item.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 320px"
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>

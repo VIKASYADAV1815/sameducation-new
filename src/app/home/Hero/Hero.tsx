@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -86,30 +86,30 @@ export function Hero() {
       </div>
 
       {/* Stats Block Bottom Right */}
-      <div className="absolute bottom-0 right-0 w-full md:w-auto bg-[#1a232c]/80 backdrop-blur-sm hidden md:block">
-        <div className="flex flex-col sm:flex-row px-8 py-10 md:px-12 md:py-12 gap-10 md:gap-16">
+      <div className="absolute bottom-0 right-0 w-full md:w-auto bg-[#1a232c]/80 backdrop-blur-sm">
+        <div className="flex flex-row md:flex-row px-4 py-6 sm:px-8 sm:py-10 md:px-12 md:py-12 gap-6 sm:gap-10 md:gap-16 justify-between md:justify-start">
           <div className="flex flex-col">
             <div className="flex items-start">
-              <span className="text-5xl md:text-6xl font-light text-white">1200</span>
-              <span className="text-2xl md:text-3xl font-light text-white mt-1">+</span>
+              <span className="text-3xl sm:text-5xl md:text-6xl font-light text-white">1200</span>
+              <span className="text-xl sm:text-2xl md:text-3xl font-light text-white mt-0 sm:mt-1">+</span>
             </div>
-            <span className="text-white/70 text-xs tracking-widest uppercase mt-4">Students Placed</span>
+            <span className="text-white/70 text-[10px] sm:text-xs tracking-widest uppercase mt-2 sm:mt-4">Students Placed</span>
           </div>
 
           <div className="flex flex-col">
             <div className="flex items-start">
-              <span className="text-5xl md:text-6xl font-light text-white">4.9</span>
-              <span className="text-xl font-light text-white mt-2 ml-1">/5</span>
+              <span className="text-3xl sm:text-5xl md:text-6xl font-light text-white">4.9</span>
+              <span className="text-sm sm:text-xl font-light text-white mt-1 sm:mt-2 ml-1">/5</span>
             </div>
-            <span className="text-white/70 text-xs tracking-widest uppercase mt-4">Success Rating</span>
+            <span className="text-white/70 text-[10px] sm:text-xs tracking-widest uppercase mt-2 sm:mt-4">Success Rating</span>
           </div>
 
           <div className="flex flex-col">
             <div className="flex items-start">
-              <span className="text-5xl md:text-6xl font-light text-white">10</span>
-              <span className="text-xl font-light text-white mt-2 ml-2">YRS</span>
+              <span className="text-3xl sm:text-5xl md:text-6xl font-light text-white">10</span>
+              <span className="text-sm sm:text-xl font-light text-white mt-1 sm:mt-2 ml-1 sm:ml-2">YRS</span>
             </div>
-            <span className="text-white/70 text-xs tracking-widest uppercase mt-4">Migration Expertise</span>
+            <span className="text-white/70 text-[10px] sm:text-xs tracking-widest uppercase mt-2 sm:mt-4">Migration Expertise</span>
           </div>
         </div>
       </div>
