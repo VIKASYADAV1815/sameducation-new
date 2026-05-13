@@ -6,34 +6,26 @@ export const Study = () => {
   const pathways = [
     {
       id: "01",
-      title: "NURSING IN CANADA & UK",
-      subtitle: "(STUDY & WORK)",
-      desc: "ADVANCE YOUR NURSING CAREER WITH GLOBAL OPPORTUNITIES. STUDY AND WORK AS A NURSE IN CANADA OR THE UK.",
+      title: "NURSING ACROSS THE WORLD",
+      subtitle: "(GLOBAL OPPORTUNITIES)",
+      desc: "ADVANCE YOUR NURSING CAREER WITH GLOBAL OPPORTUNITIES. STUDY AND WORK AS A NURSE INTERNATIONALLY.",
       img: "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=800&auto=format&fit=crop",
       link: "/nursing"
     },
     {
       id: "02",
-      title: "MBBS ABROAD & INDIA",
-      subtitle: "(CENTRAL AMERICA & EUROPE)",
-      desc: "PURSUE YOUR MEDICAL DEGREE WITH EXCLUSIVE OPPORTUNITIES IN CENTRAL AMERICA, EUROPE, AND INDIA.",
+      title: "MEDICAL PG",
+      subtitle: "(POSTGRADUATE EXCELLENCE)",
+      desc: "SPECIALIZE IN YOUR MEDICAL FIELD WITH FULL SUPPORT FOR YOUR POSTGRADUATE JOURNEY GLOBALLY.",
       img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop",
-      link: "/mbbs"
-    },
-    {
-      id: "03",
-      title: "MEDICAL PG IN GERMANY",
-      subtitle: "(MISSION GERMANY)",
-      desc: "SPECIALIZE IN GERMANY WITH FULL SUPPORT FOR YOUR POSTGRADUATE MEDICAL JOURNEY.",
-      img: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=800&auto=format&fit=crop",
       link: "/pg-germany"
     },
     {
-      id: "04",
-      title: "MS / MD / MDS",
-      subtitle: "(POSTGRADUATE MEDICAL)",
-      desc: "POSTGRADUATE MEDICAL ADMISSIONS MADE SEAMLESS. SECURE YOUR SPECIALIZATION.",
-      img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop",
+      id: "03",
+      title: "DENTAL PG",
+      subtitle: "(ADVANCED DENTISTRY)",
+      desc: "TAKE YOUR DENTAL CAREER TO THE NEXT LEVEL WITH OUR SPECIALIZED POSTGRADUATE DENTAL PATHWAYS.",
+      img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop",
       link: "/ms-md-mds"
     }
   ];
