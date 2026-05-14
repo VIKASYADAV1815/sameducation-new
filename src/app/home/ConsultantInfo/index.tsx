@@ -1,14 +1,14 @@
 export const ConsultantInfo = () => {
   const services = [
-    { id: "01", title: "Dependent Visa & Extension", desc: "End-to-end admission and visa filing assistance. We help file Dependent Visas, Visa Extensions, and handle documentation even after you have moved overseas." },
-    { id: "02", title: "Airport Transfers", desc: "We facilitate airport pickups to your new home abroad, ensuring you reach your destination safely and comfortably with our welcoming staff." },
-    { id: "03", title: "Accommodation", desc: "Assistance in finding safe housing arrangements through our large alumni network, giving your family peace of mind." },
-    { id: "04", title: "Immigration Consulting", desc: "Expert representation for residence applications. We handle all aspects from documentation to visa filing and permit acquisition." },
-    { id: "05", title: "Job Placement Assistance", desc: "Support in finding both part-time and full-time job opportunities within our extensive international organizational network." },
-    { id: "06", title: "Pastoral Support", desc: "Ongoing support to ensure your general wellbeing and help improve your social and emotional transition in a new environment." },
-    { id: "07", title: "Licensure Exam Prep", desc: "Comprehensive preparation for medical and professional licensure examinations with individual feedback and tailored study plans." },
-    { id: "08", title: "Licensure Application", desc: "Dedicated assistance with your professional licensure application, ensuring every step is completed accurately and efficiently." },
-    { id: "09", title: "IELTS / PTE Training", desc: "Expert training covering all modules with mock tests, personalized feedback, and proven strategies to achieve your target scores." }
+    { id: "01", title: "Germany University Admissions", desc: "End-to-end assistance for Bachelors and Masters programs in Germany. We handle university shortlisting, APS certification, and blocked account setup." },
+    { id: "02", title: "Ausbildung & Opportunity Card", desc: "Expert guidance for Germany's vocational training (Ausbildung) and the new Chancenkarte (Opportunity Card), connecting you with German employers." },
+    { id: "03", title: "Medical PG (MS/MD/MDS)", desc: "Specialized consulting for postgraduate medical admissions globally, including Germany's Approbation and Fachsprachprüfung (FSP) processes." },
+    { id: "04", title: "MBBS in Central America", desc: "Complete admission support for affordable, globally recognized medical degrees with direct pathways to USMLE and PLAB." },
+    { id: "05", title: "Global Nursing Pathways", desc: "Comprehensive roadmap for nurses migrating to the USA, Canada, and Australia, including NCLEX-RN and OBA exam preparation." },
+    { id: "06", title: "Credential Assessment", desc: "Dedicated assistance with NNAS (Canada), CGFNS (USA), and ANMAC (Australia) to ensure your nursing or medical degrees are globally recognized." },
+    { id: "07", title: "Visa & Immigration Consulting", desc: "Expert representation for student, work, and residence applications. We handle all aspects from documentation to visa filing and permit acquisition." },
+    { id: "08", title: "Language Proficiency Training", desc: "Expert training covering IELTS, PTE, and German language modules with mock tests, personalized feedback, and proven strategies." },
+    { id: "09", title: "Post-Landing Support", desc: "Airport transfers, accommodation assistance, and pastoral care to ensure your general wellbeing and smooth transition in a new environment." }
   ];
 
   return (

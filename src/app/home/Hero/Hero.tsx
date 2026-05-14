@@ -10,6 +10,11 @@ const slides = [
       subtitle: "Bachelors • Masters • Ausbildung • Opportunity Card",
     },
     {
+      src: "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1920&auto=format&fit=crop",
+      title: "Nursing in America • Canada • Australia",
+      subtitle: "M.Sc Nursing • FNP • CNS • Paediatric & more",
+    },
+    {
       src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1920&auto=format&fit=crop",
       title: "MBBS in Central America",
       subtitle: "Affordable medical degrees with global recognition",
@@ -51,13 +56,13 @@ export function Hero() {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 flex flex-col justify-end h-full pb-20 md:pb-32">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 flex flex-col justify-end h-full pb-48 md:pb-32">
         <div className="max-w-3xl">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-medium leading-[1.1] text-white tracking-tight uppercase"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-[72px] font-medium leading-[1.1] text-white tracking-tight uppercase"
           >
             Turn Your Study<br />Abroad Dream<br />Into Reality
           </motion.h1>
@@ -66,19 +71,19 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-6 text-lg sm:text-xl text-white/90 max-w-2xl font-light leading-relaxed"
+            className="mt-4 sm:mt-6 text-base sm:text-xl text-white/90 max-w-2xl font-light leading-relaxed"
           >
-            Expert guidance for Germany (Bachelors, Masters, Ausbildung, Opportunity Card), MBBS in Central America, and MS/MD/MDS. 
-            From licensure applications to airport transfers — we've got you covered.
+            Expert guidance for Nursing in America, Canada, Australia, Germany pathways, MBBS in Central America, and MS/MD/MDS. 
+            From university admissions to licensure prep — we've got you covered.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-10"
+            className="mt-6 sm:mt-10"
           >
-            <button className="px-8 py-4 bg-white text-slate-900 font-medium text-[15px] tracking-wide hover:bg-gray-100 transition-colors uppercase">
+            <button className="px-6 py-3 sm:px-8 sm:py-4 bg-white text-slate-900 font-medium text-[13px] sm:text-[15px] tracking-wide hover:bg-gray-100 transition-colors uppercase">
               Get Free Consultation
             </button>
           </motion.div>
@@ -86,30 +91,30 @@ export function Hero() {
       </div>
 
       {/* Stats Block Bottom Right */}
-      <div className="absolute bottom-0 right-0 w-full md:w-auto bg-[#1a232c]/80 backdrop-blur-sm">
-        <div className="flex flex-row md:flex-row px-4 py-6 sm:px-8 sm:py-10 md:px-12 md:py-12 gap-6 sm:gap-10 md:gap-16 justify-between md:justify-start">
+      <div className="absolute bottom-0 right-0 w-full md:w-auto bg-[#1a232c]/90 backdrop-blur-md">
+        <div className="flex flex-row md:flex-row px-4 py-4 sm:px-8 sm:py-6 md:px-12 md:py-12 gap-4 sm:gap-10 md:gap-16 justify-between md:justify-start">
           <div className="flex flex-col">
             <div className="flex items-start">
-              <span className="text-3xl sm:text-5xl md:text-6xl font-light text-white">1200</span>
-              <span className="text-xl sm:text-2xl md:text-3xl font-light text-white mt-0 sm:mt-1">+</span>
+              <span className="text-2xl sm:text-5xl md:text-6xl font-light text-white">1200</span>
+              <span className="text-lg sm:text-2xl md:text-3xl font-light text-white mt-0 sm:mt-1">+</span>
             </div>
-            <span className="text-white/70 text-[10px] sm:text-xs tracking-widest uppercase mt-2 sm:mt-4">Students Placed</span>
+            <span className="text-white/70 text-[8px] sm:text-xs tracking-widest uppercase mt-1 sm:mt-4">Students Placed</span>
           </div>
 
           <div className="flex flex-col">
             <div className="flex items-start">
-              <span className="text-3xl sm:text-5xl md:text-6xl font-light text-white">4.9</span>
-              <span className="text-sm sm:text-xl font-light text-white mt-1 sm:mt-2 ml-1">/5</span>
+              <span className="text-2xl sm:text-5xl md:text-6xl font-light text-white">4.9</span>
+              <span className="text-xs sm:text-xl font-light text-white mt-1 sm:mt-2 ml-1">/5</span>
             </div>
-            <span className="text-white/70 text-[10px] sm:text-xs tracking-widest uppercase mt-2 sm:mt-4">Success Rating</span>
+            <span className="text-white/70 text-[8px] sm:text-xs tracking-widest uppercase mt-1 sm:mt-4">Success Rating</span>
           </div>
 
           <div className="flex flex-col">
             <div className="flex items-start">
-              <span className="text-3xl sm:text-5xl md:text-6xl font-light text-white">10</span>
-              <span className="text-sm sm:text-xl font-light text-white mt-1 sm:mt-2 ml-1 sm:ml-2">YRS</span>
+              <span className="text-2xl sm:text-5xl md:text-6xl font-light text-white">10</span>
+              <span className="text-xs sm:text-xl font-light text-white mt-1 sm:mt-2 ml-1 sm:ml-2">YRS</span>
             </div>
-            <span className="text-white/70 text-[10px] sm:text-xs tracking-widest uppercase mt-2 sm:mt-4">Migration Expertise</span>
+            <span className="text-white/70 text-[8px] sm:text-xs tracking-widest uppercase mt-1 sm:mt-4">Migration Expertise</span>
           </div>
         </div>
       </div>

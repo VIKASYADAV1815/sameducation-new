@@ -9,15 +9,15 @@ export const FAQ = () => {
   const faqs = [
     {
       question: "What exact pathways does SAMEDUCATION support?",
-      answer: "We support the client-requested pathways only: GERMANY, Bachelors/Masters, AUSBILDUNG, OPPORTUNITY CARD, MBBS in Central America, and MS/MD/MDS."
+      answer: "We specialize in Nursing pathways for USA, Canada, and Australia, Germany (Bachelors/Masters, Ausbildung, Opportunity Card), MBBS in Central America, and MS/MD/MDS."
     },
     {
-      question: "Do you provide Job Placement Assistance?",
-      answer: "Yes. We help you find both part-time and full-time job opportunities through our international network, which is particularly beneficial for Opportunity Card candidates."
+      question: "What are the eligibility criteria for M.Sc Nursing abroad?",
+      answer: "For USA, Canada, and Australia, the primary requirements are a B.Sc Nursing degree and an IELTS score of 7 Band. The duration for these programs is typically 2 years."
     },
     {
-      question: "Is accommodation assistance included in your services?",
-      answer: "Absolutely. We assist you in finding safe and comfortable housing arrangements leveraging our large alumni network.",
+      question: "Which Nursing specializations can I pursue?",
+      answer: "Popular programs include Family Nurse Practitioner (FNP), Clinical Nurse Specialist (CNS), Paediatric Nursing, Nursing Leadership & Health Systems, Gerontology, and Psychiatric Mental Health."
     }
   ];
 

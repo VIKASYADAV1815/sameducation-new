@@ -2,22 +2,15 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const mobileToggleWrapperClass = isScrolled
-    ? "bg-stone-100/95 shadow-lg border border-stone-200/80 backdrop-blur"
-    : "bg-slate-900/55 border border-white/15 shadow-lg backdrop-blur-md";
-
-  const mobileToggleButtonClass = isScrolled
-    ? "text-slate-900 hover:bg-stone-200/80 active:bg-stone-300/70"
-    : "text-white hover:bg-white/10 active:bg-white/15";
-
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 30);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -25,76 +18,112 @@ export const Header = () => {
 
   const navItems = [
     { name: "HOME", path: "/" },
-    { name: "NURSING (CANADA/UK)", path: "/nursing" },
-    { name: "MBBS ABROAD & INDIA", path: "/mbbs" },
-    { name: "MEDICAL PG IN GERMANY", path: "/pg-germany" },
+    { name: "NURSING (USA/CAN/AUS)", path: "/nursing" },
+    { name: "MBBS ABROAD", path: "/mbbs" },
+    { name: "PG GERMANY", path: "/pg-germany" },
     { name: "MS/MD/MDS", path: "/ms-md-mds" },
     { name: "SERVICES", path: "/services" },
     { name: "CONTACT", path: "/contact" },
   ];
 
   return (
-    <header className={`fixed top-0 w-full z-50 ${isScrolled ? "pt-3" : "pt-4"} px-6 md:px-12 lg:px-16 flex items-center justify-between`}>
-      {/* Logo Area - Floating Box */}
-      <div className={`pointer-events-auto transition-all duration-500 rounded-sm ${isScrolled ? "bg-transparent p-2" : "bg-transparent p-1"}`}>
-        <Link href="/" className="flex items-center justify-center">
-          <div className="w-24 h-24 bg-center bg-no-repeat bg-contain" style={{ backgroundImage: "url('/logo.png')" }} aria-label="SAM Education logo" />
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] px-6 md:px-12 lg:px-16 flex items-center justify-between 
+        ${isScrolled 
+          ? "bg-white/95 backdrop-blur-xl shadow-sm py-2" 
+          : "bg-transparent py-5"}`}
+    >
+      {/* Logo Area - Balanced Size */}
+      <div className="flex-shrink-0">
+        <Link href="/" className="flex items-center">
+          <motion.div
+            animate={{ 
+              scale: isScrolled ? 0.95 : 1,
+            }}
+            transition={{ type: "spring", stiffness: 260, damping: 20 }}
+            className={`bg-center bg-no-repeat bg-contain transition-all duration-500 ${
+              isScrolled ? "w-18 h-18" : "w-24 h-24"
+            }`}
+            style={{ 
+              backgroundImage: "url('/logo.png')",
+              width: isScrolled ? '72px' : '96px', // Explicit sizes for stability
+              height: isScrolled ? '72px' : '96px' 
+            }}
+            aria-label="SAM Education logo"
+          />
         </Link>
       </div>
 
-      {/* Desktop Navigation - Floating Box */}
-      <div className={`hidden lg:flex items-center pointer-events-auto transition-all duration-500 rounded-sm ${isScrolled ? "bg-white shadow-lg border border-gray-100 px-8 py-4" : "bg-transparent px-6 py-3"}`}>
-        <nav className="flex items-center space-x-6 xl:space-x-10 pointer-events-auto">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.path}
-              className={`text-[11px] font-semibold tracking-widest whitespace-nowrap transition-colors ${
-                isScrolled
-                  ? "text-slate-900 hover:text-blue-600"
-                  : "text-white hover:text-white/80 drop-shadow-md"
-              }`}
-            >
-              {item.name.toUpperCase()}
-            </Link>
-          ))}
-        </nav>
-      </div>
+      {/* Desktop Navigation */}
+      <nav className="hidden lg:flex items-center space-x-7 xl:space-x-10">
+        {navItems.map((item) => (
+          <Link
+            key={item.name}
+            href={item.path}
+            className={`group relative text-[11px] font-bold tracking-[0.22em] transition-colors duration-300 ${
+              isScrolled ? "text-slate-900" : "text-white drop-shadow-md"
+            }`}
+          >
+            {item.name}
+            <span className={`absolute -bottom-2 left-0 h-[1.5px] w-0 transition-all duration-500 ease-in-out group-hover:w-full ${
+              isScrolled ? "bg-blue-600" : "bg-white"
+            }`} />
+          </Link>
+        ))}
+      </nav>
 
-      {/* Mobile Menu Toggle - Floating Box */}
-      <div className={`lg:hidden pointer-events-auto transition-all duration-500 rounded-sm ${mobileToggleWrapperClass}`}>
-        <button 
+      {/* Premium Animated Hamburger */}
+      <div className="lg:hidden">
+        <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className={`rounded-sm p-3 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-0 ${mobileToggleButtonClass} ${
-            isScrolled ? "focus-visible:ring-slate-300" : "focus-visible:ring-white/40"
-          }`}
-          aria-label="Menu"
+          className="relative w-10 h-10 flex flex-col justify-center items-center z-[60] focus:outline-none"
+          aria-label="Toggle Menu"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            {isMobileMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
+          <div className="space-y-1.5">
+            <span className={`block w-6 h-0.5 transition-all duration-500 transform ${
+              isScrolled || isMobileMenuOpen ? "bg-slate-900" : "bg-white"
+            } ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""}`} />
+            
+            <span className={`block w-6 h-0.5 transition-all duration-300 ${
+              isScrolled || isMobileMenuOpen ? "bg-slate-900" : "bg-white"
+            } ${isMobileMenuOpen ? "opacity-0" : "opacity-100"}`} />
+            
+            <span className={`block w-4 h-0.5 transition-all duration-500 transform ${
+              isScrolled || isMobileMenuOpen ? "bg-slate-900" : "bg-white"
+            } ${isMobileMenuOpen ? "-rotate-45 -translate-y-2 w-6" : ""}`} />
+          </div>
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-6 right-6 mt-4 pointer-events-auto bg-slate-900/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-sm py-4 px-4 flex flex-col space-y-2 z-50">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.path}
-              className="px-4 py-3 text-xs font-semibold text-white/80 hover:bg-white/5 hover:text-white rounded-sm transition-colors uppercase tracking-widest"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-      )}
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="lg:hidden fixed inset-0 h-screen bg-white z-50 flex flex-col justify-center px-12 space-y-8"
+          >
+            {navItems.map((item, index) => (
+              <motion.div
+                key={item.name}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Link
+                  href={item.path}
+                  className="text-2xl font-bold text-slate-900 uppercase tracking-widest border-b border-slate-100 pb-2 block"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

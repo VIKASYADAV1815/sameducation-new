@@ -1,261 +1,260 @@
-import { Metadata } from "next";
+"use client";
+
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { PGGermanyTestimonials } from "@/components/Testimonials/PGGermanyTestimonials";
-
-export const metadata: Metadata = {
-  title: "Medical PG in Germany | SAMEDUCATION",
-  description: "Pursue your Medical PG in Germany after MBBS in India. Fully-paid on-the-job training, no competitive clinical exams.",
-};
+import { ArrowUpRight } from "lucide-react";
 
 export default function PGGermanyPage() {
+  const pathways = [
+    {
+      id: "01",
+      title: "MEDICAL PG (APPROBATION)",
+      desc: "Super specialization without competitive MCQ exams. Work as a fully-paid doctor (Assistenzarzt) while pursuing your Medical PG. The specialist degree (Facharzt) is a by-product of your employment.",
+      highlights: ["No Tuition Fees", "Earn While You Learn", "FSP & KP Exam Prep", "Direct Hospital Placement"]
+    },
+    {
+      id: "02",
+      title: "MASTERS IN GERMANY",
+      desc: "Pursue globally acclaimed Master's programs in engineering, management, and sciences. Germany's cost-effective education features mostly tuition-free programs at public universities.",
+      highlights: ["Public Universities", "Post-Study Work Visa", "English Taught Programs", "APS Certification Support"]
+    },
+    {
+      id: "03",
+      title: "AUSBILDUNG (VOCATIONAL)",
+      desc: "Germany's dual vocational training system. Work as an apprentice in a German company while attending vocational school. Gain a highly respected German qualification and a steady income.",
+      highlights: ["Nursing & IT Focus", "Guaranteed Stipend", "B2 German Required", "Direct Employment"]
+    },
+    {
+      id: "04",
+      title: "OPPORTUNITY CARD (CHANCENKARTE)",
+      desc: "The new points-based immigration system allowing skilled workers to enter Germany for up to one year to find employment or explore Ausbildung opportunities.",
+      highlights: ["No Prior Job Offer Needed", "Points Based System", "Part-Time Work Allowed", "Fast-Track Visa"]
+    }
+  ];
+
   return (
-    <main className="min-h-screen bg-white font-sans">
-      <section className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden bg-slate-900 pt-20">
+    <main className="min-h-screen bg-white font-sans text-slate-900">
+      
+      {/* Hero Section */}
+      <section className="relative h-[70vh] w-full flex items-end pb-24 overflow-hidden bg-slate-900">
         <Image
           src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1920&auto=format&fit=crop"
           alt="Medical PG in Germany"
           fill
-          sizes="100vw"
-          className="object-cover opacity-40"
+          className="object-cover opacity-30 grayscale"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent" />
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <span className="text-blue-400 font-semibold tracking-[0.2em] uppercase text-xs mb-4 block">
-            [ Mission Germany ]
-          </span>
-          <h1 className="text-4xl md:text-6xl font-medium text-white tracking-tight uppercase leading-[1.1] mb-6">
-            Medical PG In Germany
-          </h1>
-          <p className="text-lg text-white/80 font-light max-w-2xl mx-auto">
-            Super specialization without competitive MCQ exams. Fully-paid on-the-job training as a doctor in Germany.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto relative">
-        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50 pointer-events-none -z-10" />
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-medium tracking-tight uppercase text-slate-900 mb-6">
-              Why Medical PG in Germany is Unique
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              When you decide to train as a specialist in Germany for your medical PG, you get rid of all the challenges faced by doctors in India. You can pursue your PG in Germany after MBBS without competitive clinical exams or compromising on your choice of specialization.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-8">
-              The German system offers an integrated pathway for super specialization and settlement. It allows you to work in a hospital/clinic as a fully-paid doctor (Assistenzarzt) while pursuing your Medical PG. The specialist degree (Facharzt) is a by-product of your employment.
-            </p>
-            
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-12 h-12 shrink-0 bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xl rounded-full">1</div>
-                <div>
-                  <h4 className="font-bold text-sm tracking-widest uppercase text-slate-900 mb-1">Language & Approbation</h4>
-                  <p className="text-xs text-gray-500 leading-relaxed">Comprehensive B2/C1 medical German training and guidance for the Fachsprachprüfung (FSP) and Kenntnisprüfung (KP) to secure your medical license (Approbation).</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="w-12 h-12 shrink-0 bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xl rounded-full">2</div>
-                <div>
-                  <h4 className="font-bold text-sm tracking-widest uppercase text-slate-900 mb-1">Observerships & Interviews</h4>
-                  <p className="text-xs text-gray-500 leading-relaxed">Leverage our strong network with German hospitals to secure clinical observerships (Hospitation) and residency job interviews.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="w-12 h-12 shrink-0 bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xl rounded-full">3</div>
-                <div>
-                  <h4 className="font-bold text-sm tracking-widest uppercase text-slate-900 mb-1">Zero Tuition Fees</h4>
-                  <p className="text-xs text-gray-500 leading-relaxed">Postgraduate medical training in Germany is a salaried job, meaning you earn while you learn with zero tuition fees.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="relative h-[600px] w-full bg-slate-100 overflow-hidden shadow-2xl">
-            <Image
-              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1200&auto=format&fit=crop"
-              alt="Hospital in Germany"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Programs & Services Section */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 bg-blue-50/50 border-y border-gray-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-medium tracking-tight uppercase text-slate-900 mb-4">
-              Programs & Services
-            </h2>
-            <p className="text-sm font-bold tracking-widest uppercase text-gray-500">
-              Offering Programs That Meet Your Goals
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white p-10 shadow-xl border border-gray-100 flex flex-col h-full hover:-translate-y-1 transition-transform">
-            <div className="w-12 h-12 bg-slate-900 text-white flex items-center justify-center rounded-sm mb-6">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-            </div>
-            <h3 className="text-xl font-medium tracking-tight uppercase text-slate-900 mb-4">
-              Why <span className="text-blue-600">MEDICAL PG</span> IN GERMANY is Such a Unique System?
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed mb-6">
-              When you decide to train as a specialist in Germany for your medical PG, you get rid of all the challenges faced by doctors/dentists in India. Pursue your PG in Germany after MBBS in India without competitive clinical exams or compromising on specialization. Germany offers an integrated pathway for super specialization and settlement, plus a handsome salary even before specialization begins.
-            </p>
-            <p className="text-sm text-gray-600 leading-relaxed mb-8 flex-grow">
-              MissionGermany extends its helping hand through a no-cost, all-inclusive range of integrated service for Doctors, Dentists & Pharmacists.
-            </p>
-            <Link href="/contact" className="text-xs font-bold tracking-widest uppercase text-blue-600 hover:text-slate-900 transition-colors">Read More &rarr;</Link>
-          </div>
-
-          <div className="bg-white p-10 shadow-xl border border-gray-100 flex flex-col h-full hover:-translate-y-1 transition-transform">
-            <div className="w-12 h-12 bg-slate-900 text-white flex items-center justify-center rounded-sm mb-6">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-            </div>
-            <h3 className="text-xl font-medium tracking-tight uppercase text-slate-900 mb-4">
-              Why <span className="text-blue-600">MASTERS</span> IN GERMANY is Such a Unique System?
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed mb-6">
-              Many Indian graduates favor pursuing Master's degrees in Germany due to its prestigious education system, featuring globally acclaimed universities. Germany's cost-effective education, with most public universities offering tuition-free programs, is another significant draw.
-            </p>
-            <p className="text-sm text-gray-600 leading-relaxed mb-8 flex-grow">
-              Combining quality education, affordability, career prospects, and cultural immersion, compel Indian graduates to advance their academic and professional pursuits in Germany.
-            </p>
-            <Link href="/contact" className="text-xs font-bold tracking-widest uppercase text-blue-600 hover:text-slate-900 transition-colors">Read More &rarr;</Link>
-          </div>
-        </div>
-      </div>
-      </section>
-
-      {/* Work - Earn - Learn Section */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-medium tracking-tight uppercase text-slate-900">
-            Work - Earn - Learn
-          </h2>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
         
-        <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="bg-slate-900 text-white p-12 flex flex-col justify-center">
-            <h3 className="text-2xl font-light uppercase tracking-widest mb-4">Lerne Deutsch</h3>
-            <p className="text-sm font-bold tracking-widest text-blue-400 mb-6 uppercase">Simplifying German Language Training</p>
-            <p className="text-white/80 leading-relaxed text-sm">
-              We offer preparatory German Language courses to help you achieve your academic/career requisites for Germany. The shortage of skilled workers in Germany opens doors for qualified professionals worldwide.
-            </p>
-          </div>
-          <div className="bg-white border-y border-r border-gray-200 p-12 flex flex-col justify-center items-start">
-            <h3 className="text-2xl md:text-3xl font-medium tracking-tight uppercase text-slate-900 mb-8 leading-snug">
-              Every new language <span className="text-blue-600">we learn,</span><br/>
-              opens new possibilities.
-            </h3>
-            <Link href="/contact" className="bg-slate-900 text-white text-[11px] font-bold tracking-[0.2em] uppercase px-8 py-4 hover:bg-blue-600 transition-colors">
-              Enroll Today
-            </Link>
-          </div>
+        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24">
+          <motion.span 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-blue-500 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
+          >
+            [ MISSION GERMANY ]
+          </motion.span>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-6xl lg:text-[72px] font-medium leading-[1.1] text-white tracking-tight uppercase max-w-4xl"
+          >
+            Your Pathway to<br />Success in Germany
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mt-8 text-[13px] md:text-[15px] font-semibold tracking-wider text-gray-300 leading-relaxed max-w-2xl uppercase"
+          >
+            Comprehensive guidance for Medical PG, Masters, Ausbildung, and the new Opportunity Card. Zero tuition fees and high employability.
+          </motion.p>
         </div>
       </section>
 
-      {/* What do we do? Section */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 bg-slate-50 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-medium tracking-tight uppercase text-slate-900 mb-8">
-              What do we do?
-            </h2>
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-start">
-                <span className="text-blue-600 mr-3 mt-1">■</span>
-                <span className="text-gray-700 text-sm leading-relaxed">We do meaningful, constructive, and honest applications for medical PG in Germany.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-600 mr-3 mt-1">■</span>
-                <span className="text-gray-700 text-sm leading-relaxed">We take the guesswork out of your journey and offer a complete roadmap towards your goal.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-600 mr-3 mt-1">■</span>
-                <span className="text-gray-700 text-sm leading-relaxed">We collaborate with successful medical practitioners in Germany to mentor you.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-600 mr-3 mt-1">■</span>
-                <span className="text-gray-700 text-sm leading-relaxed">We ensure reliable resources and planned timelines for your smooth transition.</span>
-              </li>
-            </ul>
-          </div>
-          
-          <div className="bg-blue-600 text-white p-10 shadow-2xl">
-            <h3 className="text-2xl font-medium tracking-tight uppercase mb-6">
-              So, what are you waiting for?
-            </h3>
-            <div className="space-y-4 mb-8">
-              <p className="flex items-center gap-3 font-medium text-lg">
-                <span>📞</span> +91 9615543210
+      {/* Pathways Grid */}
+      <section className="relative py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-b border-gray-200">
+        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none -z-10" />
+        
+        <div className="mb-20">
+          <motion.span 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
+          >
+            [ OUR PROGRAMS ]
+          </motion.span>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase"
+          >
+            German Education & Careers
+          </motion.h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-gray-200 bg-white/90 backdrop-blur-sm">
+          {pathways.map((pathway, idx) => (
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              key={pathway.id} 
+              className="p-10 border-r border-b border-gray-200 hover:bg-slate-900 hover:text-white transition-colors duration-500 group flex flex-col relative"
+            >
+              <div className="text-5xl md:text-6xl font-light text-slate-200 mb-8 transition-colors duration-500 group-hover:text-blue-600">
+                {pathway.id}
+              </div>
+              <h3 className="text-xl md:text-2xl font-medium tracking-tight uppercase text-slate-900 group-hover:text-white mb-6">
+                {pathway.title}
+              </h3>
+              <p className="text-[12px] text-gray-500 group-hover:text-gray-400 font-medium leading-relaxed tracking-wide mb-10 flex-1">
+                {pathway.desc}
               </p>
-              <p className="flex items-center gap-3 font-medium text-lg">
-                <span>📞</span> +49 1523 6172349
-              </p>
-            </div>
-            <div className="pt-8 border-t border-white/20">
-              <h4 className="text-xl font-bold uppercase tracking-widest mb-2">If U Change Nothing,</h4>
-              <h4 className="text-xl font-bold uppercase tracking-widest mb-6">Nothing Will Change</h4>
-              <Link href="/contact" className="inline-block bg-white text-blue-600 text-[11px] font-bold tracking-[0.2em] uppercase px-8 py-4 hover:bg-slate-900 hover:text-white transition-colors">
-                Book a Free Consultation
+              
+              <div className="pt-6 border-t border-gray-200 group-hover:border-gray-700">
+                <span className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[10px] block mb-4">
+                  [ KEY ADVANTAGES ]
+                </span>
+                <ul className="space-y-2">
+                  {pathway.highlights.map((h, i) => (
+                    <li key={i} className="text-[11px] font-bold text-slate-900 group-hover:text-white uppercase tracking-wider">
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="absolute top-10 right-10 text-gray-300 group-hover:text-blue-600 transition-colors">
+                <ArrowUpRight size={28} strokeWidth={1} />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Roadmap */}
+      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-b border-gray-200">
+        <div className="mb-20">
+          <motion.span 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
+          >
+            [ THE FACHARZT ROADMAP ]
+          </motion.span>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase max-w-4xl"
+          >
+            Medical Specialization Process
+          </motion.h2>
+        </div>
+
+        <div className="flex flex-col">
+          {[
+            { step: "01", title: "GERMAN LANGUAGE MASTERY", desc: "Master German from A1 to B2 level. Strong communication is non-negotiable for working in German hospitals." },
+            { step: "02", title: "DEFİZITBESCHEID & VISA", desc: "Document assessment by the German medical council and applying for the correct medical visa." },
+            { step: "03", title: "MEDICAL GERMAN (C1) & FSP", desc: "Clear the specialized medical language exam (Fachsprachprüfung) focusing on doctor-patient communication." },
+            { step: "04", title: "TEMPORARY LICENSE (BERUFSERLAUBNIS)", desc: "Begin working as a paid assistant doctor while preparing for your final medical exam." },
+            { step: "05", title: "KENNTNISPRÜFUNG (KP) & APPROBATION", desc: "Clear the knowledge exam (KP) to receive your permanent medical license and continue your Facharzt training." }
+          ].map((item, index) => (
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: index * 0.1 }}
+              key={index}
+              className="group flex flex-col md:flex-row items-start md:items-center py-12 border-t border-gray-200 relative hover:bg-gray-50 transition-colors -mx-6 px-6 md:-mx-12 md:px-12 lg:-mx-24 lg:px-24"
+            >
+              <div className="text-5xl md:text-6xl font-light text-slate-900 w-24 md:w-48 shrink-0 mb-6 md:mb-0 transition-colors duration-500 group-hover:text-blue-600">
+                {item.step}
+              </div>
+              <div className="flex-1 md:pr-16 flex flex-col justify-center">
+                <h3 className="text-xl md:text-3xl font-medium tracking-tight uppercase text-slate-900 mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-[12px] font-medium tracking-wider text-gray-500 leading-relaxed uppercase max-w-3xl">
+                  {item.desc}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+          <div className="border-t border-gray-200" />
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto">
+        <div className="flex flex-col lg:flex-row gap-16 items-center">
+          <div className="w-full lg:w-1/2">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase mb-8"
+            >
+              Every new language <span className="text-blue-600">we learn</span> opens new possibilities.
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-[12px] text-gray-500 font-medium leading-relaxed tracking-wide uppercase mb-10"
+            >
+              We offer preparatory German Language courses to help you achieve your academic and career requisites for Germany. The shortage of skilled workers in Germany opens doors for qualified professionals worldwide.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <Link href="/contact" className="inline-block bg-black text-white text-[11px] font-bold tracking-[0.2em] uppercase px-10 py-5 hover:bg-gray-800 transition-colors">
+                Start Language Training
               </Link>
+            </motion.div>
+          </div>
+          <div className="w-full lg:w-1/2">
+            <div className="bg-slate-900 text-white p-12 lg:p-16">
+              <h3 className="text-2xl font-medium tracking-tight uppercase mb-8">
+                So, what are you waiting for?
+              </h3>
+              <ul className="space-y-4 mb-10">
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-3 mt-1">■</span>
+                  <span className="text-[12px] font-medium tracking-wider uppercase text-gray-300 leading-relaxed">Honest applications for medical PG & Masters in Germany.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-3 mt-1">■</span>
+                  <span className="text-[12px] font-medium tracking-wider uppercase text-gray-300 leading-relaxed">A complete roadmap towards your Facharzt or career goal.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-3 mt-1">■</span>
+                  <span className="text-[12px] font-medium tracking-wider uppercase text-gray-300 leading-relaxed">Collaboration with successful practitioners in Germany.</span>
+                </li>
+              </ul>
+              <div className="pt-8 border-t border-gray-800">
+                <p className="text-[10px] font-bold tracking-[0.15em] uppercase text-gray-500 mb-2">IF YOU CHANGE NOTHING,</p>
+                <p className="text-[12px] font-bold tracking-[0.15em] uppercase text-white">NOTHING WILL CHANGE.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <PGGermanyTestimonials />
-
-      <section className="relative py-24 px-6 md:px-12 lg:px-24 bg-slate-900 text-white overflow-hidden border-t border-gray-800">
-        {/* Subtle line pattern */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:24px_24px] opacity-50" />
-        
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h3 className="text-3xl md:text-5xl font-medium tracking-tight uppercase text-white mb-6">The Roadmap to Facharzt</h3>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">A structured, predictable 5-step process to becoming a medical specialist in Germany.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/5 border border-white/10 p-8 hover:-translate-y-2 transition-transform duration-300">
-              <span className="text-5xl font-light text-blue-500 mb-6 block">01</span>
-              <h4 className="text-xl font-medium tracking-tight uppercase text-white mb-4">German Language Mastery</h4>
-              <p className="text-sm text-gray-400 leading-relaxed">Master German from A1 to B2 level. Strong communication is non-negotiable for working in German hospitals.</p>
-            </div>
-            
-            <div className="bg-white/5 border border-white/10 p-8 hover:-translate-y-2 transition-transform duration-300">
-              <span className="text-5xl font-light text-blue-500 mb-6 block">02</span>
-              <h4 className="text-xl font-medium tracking-tight uppercase text-white mb-4">Defizitbescheid & Visa Application</h4>
-              <p className="text-sm text-gray-400 leading-relaxed">Document assessment by the German medical council and applying for the correct medical visa.</p>
-            </div>
-            
-            <div className="bg-white/5 border border-white/10 p-8 hover:-translate-y-2 transition-transform duration-300">
-              <span className="text-5xl font-light text-blue-500 mb-6 block">03</span>
-              <h4 className="text-xl font-medium tracking-tight uppercase text-white mb-4">Medical German (C1) & Fachsprachprüfung (FSP)</h4>
-              <p className="text-sm text-gray-400 leading-relaxed">Clear the specialized medical language exam (FSP) focusing on doctor-patient and doctor-doctor communication.</p>
-            </div>
-            
-            <div className="bg-white/5 border border-white/10 p-8 hover:-translate-y-2 transition-transform duration-300 lg:col-start-1 lg:col-end-2 lg:translate-x-1/2">
-              <span className="text-5xl font-light text-blue-500 mb-6 block">04</span>
-              <h4 className="text-xl font-medium tracking-tight uppercase text-white mb-4">Temporary License (Berufserlaubnis) & Work</h4>
-              <p className="text-sm text-gray-400 leading-relaxed">Begin working as a paid assistant doctor while preparing for your final medical exam.</p>
-            </div>
-            
-            <div className="bg-blue-600 border border-blue-500 p-8 hover:-translate-y-2 transition-transform duration-300 lg:col-start-2 lg:col-end-3 lg:translate-x-1/2 shadow-2xl shadow-blue-900/50">
-              <span className="text-5xl font-light text-white mb-6 block">05</span>
-              <h4 className="text-xl font-medium tracking-tight uppercase text-white mb-4">Kenntnisprüfung (KP) & Full Approbation</h4>
-              <p className="text-sm text-blue-100 leading-relaxed">Clear the knowledge exam (KP) to receive your permanent medical license and continue your Facharzt training.</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }

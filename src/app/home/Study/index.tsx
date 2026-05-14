@@ -6,9 +6,9 @@ export const Study = () => {
   const pathways = [
     {
       id: "01",
-      title: "NURSING ACROSS THE WORLD",
-      subtitle: "(GLOBAL OPPORTUNITIES)",
-      desc: "ADVANCE YOUR NURSING CAREER WITH GLOBAL OPPORTUNITIES. STUDY AND WORK AS A NURSE INTERNATIONALLY.",
+      title: "NURSING in AMERICA • CANADA • AUSTRALIA",
+      subtitle: "(M.Sc NURSING PATHWAYS)",
+      desc: "Comprehensive M.Sc Nursing programs in USA, Canada, and Australia. 2-year duration, eligibility: B.Sc Nursing with IELTS 7 Band. Explore top universities and colleges.",
       img: "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=800&auto=format&fit=crop",
       link: "/nursing"
     },
@@ -91,6 +91,23 @@ export const Study = () => {
                 <p className="text-[11px] font-semibold tracking-wider text-gray-600 leading-relaxed max-w-md">
                   {item.desc}
                 </p>
+                
+                {item.id === "01" && (
+                  <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 border-l-2 border-blue-600 pl-4 py-2">
+                    <div>
+                      <h4 className="text-[10px] font-bold uppercase text-blue-600 mb-1">America</h4>
+                      <p className="text-[10px] text-gray-500 uppercase">3 Uni + 2 Colleges<br/>IELTS 7 | 2 Years</p>
+                    </div>
+                    <div>
+                      <h4 className="text-[10px] font-bold uppercase text-blue-600 mb-1">Canada</h4>
+                      <p className="text-[10px] text-gray-500 uppercase">3 Uni + 2 Colleges<br/>Same as USA | 2 Years</p>
+                    </div>
+                    <div>
+                      <h4 className="text-[10px] font-bold uppercase text-blue-600 mb-1">Australia</h4>
+                      <p className="text-[10px] text-gray-500 uppercase">3 Uni + 2 Colleges<br/>Same as CAN | 2 Years</p>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Arrow */}
@@ -99,6 +116,37 @@ export const Study = () => {
               </div>
             </Link>
           ))}
+        </div>
+
+        {/* Popular Programs in Nursing */}
+        <div className="mt-24 pt-16 border-t border-gray-200">
+          <div className="flex flex-col items-center mb-16">
+            <div className="inline-block px-6 py-2 border border-blue-600/20 rounded-full mb-6 bg-blue-50/50">
+              <span className="text-blue-600 font-bold tracking-[0.25em] uppercase text-[10px]">
+                [ POPULAR PROGRAMS IN NURSING ]
+              </span>
+            </div>
+            <h3 className="text-2xl md:text-3xl font-medium tracking-tight uppercase text-slate-900">
+              Global Specializations
+            </h3>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+            {[
+              "FNP - Family Nurse Practitioner",
+              "CNS - Clinical Nurse Specialist",
+              "Paediatric Nurse",
+              "Nursing Leadership",
+              "Gerontology",
+              "Psychiatric Mental Health"
+            ].map((prog) => (
+              <div key={prog} className="flex flex-col items-center">
+                <div className="w-1 h-1 bg-blue-600 rounded-full mb-3" />
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-800 leading-tight">
+                  {prog}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Footer Overview */}
