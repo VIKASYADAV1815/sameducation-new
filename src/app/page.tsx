@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Hero, Features, Testimonials, CTA, Coaching, Study, ConsultantInfo, GlobalIndian, FAQ } from "./home";
+import { Hero, Features, Testimonials, CTA, Coaching, Study, ConsultantInfo, GlobalIndian, FAQ, NursingPrograms } from "./home";
 
 export const metadata: Metadata = {
   title: "SAMEDUCATION | Germany & Medical Study Guidance",
@@ -46,6 +46,7 @@ export default function HomePage() {
         <Hero />
         <ConsultantInfo />
         <Study />
+        <NursingPrograms />
         <Testimonials />
         <FAQ />
         <CTA />

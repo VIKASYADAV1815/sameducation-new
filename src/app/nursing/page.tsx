@@ -2,39 +2,45 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { NursingTestimonials } from "@/components/Testimonials/NursingTestimonials";
 import { ArrowUpRight } from "lucide-react";
 
 export default function NursingPage() {
   const nursingPrograms = [
     {
       title: "FAMILY NURSE PRACTITIONER (FNP)",
+      img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=800&auto=format&fit=crop",
       desc: "Advanced clinical training to provide comprehensive primary healthcare services to individuals and families across the lifespan. Family Nurse Practitioners are authorized to diagnose acute and chronic illnesses, prescribe medications, and manage patient care independently in many jurisdictions.",
       highlights: ["Primary Healthcare Delivery", "Diagnostic & Prescriptive Authority", "Autonomous Clinical Practice"]
     },
     {
       title: "CLINICAL NURSE SPECIALIST (CNS)",
+      img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop",
       desc: "An advanced practice role focusing on specialized clinical expertise, nursing leadership, and healthcare consulting. Clinical Nurse Specialists work at the intersection of patient care, nursing practice, and healthcare systems to optimize clinical outcomes and safety standards.",
       highlights: ["Systems Leadership & Quality", "Evidence-Based Practice Research", "Specialized Clinical Consulting"]
     },
     {
       title: "PAEDIATRIC REGISTERED NURSE",
+      img: "https://images.unsplash.com/photo-1581594549595-35f6edc7b762?q=80&w=800&auto=format&fit=crop",
       desc: "Dedicated specialized care for infants, children, and adolescents. This pathway focuses on pediatric-specific pharmacology, developmental milestones, childhood illnesses, and family-centered care models in acute and community healthcare settings.",
       highlights: ["Neonatal & Pediatric Specialization", "Family-Centered Education", "Developmental Support Models"]
     },
     {
       title: "NURSING LEADERSHIP & HEALTH SYSTEMS",
+      img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop",
       desc: "Designed for nurses aspiring to executive leadership and healthcare administration roles. The curriculum focuses on healthcare policy, organizational behavior, financial management, quality improvement, and strategic nursing workforce management.",
       highlights: ["Healthcare Administration", "Nursing Policy Development", "Strategic Resource Planning"]
     },
     {
       title: "GERONTOLOGICAL NURSING",
+      img: "https://images.unsplash.com/photo-1584516150909-c43483ee7932?q=80&w=800&auto=format&fit=crop",
       desc: "Addressing the specialized physiological and psychological needs of the aging population. This specialization focuses on chronic disease management, palliative care, and the promotion of functional independence and quality of life for older adults.",
       highlights: ["Advanced Elderly Care", "Chronic Illness Management", "Palliative & End-of-Life Care"]
     },
     {
       title: "PSYCHIATRIC MENTAL HEALTH NURSE",
+      img: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=800&auto=format&fit=crop",
       desc: "Advanced practice in mental health assessment, diagnosis, and therapeutic interventions. This pathway prepares nurses to provide comprehensive psychiatric care and behavioral health services to individuals and groups across all ages.",
       highlights: ["Psychotherapeutic Counseling", "Crisis Intervention & Management", "Behavioral Health Integration"]
     }
@@ -88,12 +94,12 @@ export default function NursingPage() {
     <main className="min-h-screen bg-white font-sans text-slate-900">
       
       {/* Hero Section */}
-      <section className="relative h-[70vh] w-full flex items-end pb-24 overflow-hidden bg-slate-900">
+      <section className="relative h-[75vh] w-full flex items-end pb-16 pt-32 overflow-hidden bg-slate-900">
         <Image
-          src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1920&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1599045118108-bf9954418b76?q=80&w=1920&auto=format&fit=crop"
           alt="Global Nursing Career Excellence"
           fill
-          className="object-cover opacity-40 grayscale"
+          className="object-cover opacity-60"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
@@ -112,9 +118,16 @@ export default function NursingPage() {
       </section>
 
       {/* World-Class Destinations - Strict Grid */}
-      <section className="relative py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-b border-gray-200">
-        <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#f8fafc_10px,#f8fafc_11px)] opacity-50 pointer-events-none -z-10" />
-        <div className="mb-20">
+      <section className="relative py-32 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-b border-gray-200 bg-slate-50">
+        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+          <Image 
+            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1920&auto=format&fit=crop" 
+            alt="Pattern background" 
+            fill 
+            className="object-cover opacity-[0.15] mix-blend-multiply" 
+          />
+        </div>
+        <div className="mb-20 relative z-10">
           <motion.span 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -173,12 +186,16 @@ export default function NursingPage() {
                   <p className="text-[12px] font-bold text-slate-900 uppercase tracking-wider">{dest.exams}</p>
                 </div>
                 <div>
-                  <span className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[10px] block mb-1">
+                  <span className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[10px] block mb-3">
                     [ PREMIER INSTITUTIONS ]
                   </span>
-                  <p className="text-[11px] font-bold text-gray-500 uppercase tracking-wider leading-relaxed">
-                    {dest.colleges.join(" • ")}
-                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {dest.colleges.map((college, i) => (
+                      <span key={i} className="text-[10px] font-bold text-slate-700 uppercase tracking-wider border border-gray-200 px-3 py-1.5 bg-white shadow-sm">
+                        {college}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -253,14 +270,23 @@ export default function NursingPage() {
       </section>
 
       {/* Specialized Career Pathways - Sharp Grid */}
-      <section className="relative py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto">
-        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none -z-10" />
-        <div className="mb-20">
+      <section className="relative py-32 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto bg-slate-900 text-white">
+        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-20">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="nursingPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M0 40L40 0H20L0 20M40 40V20L20 40" fill="none" stroke="#3b82f6" strokeWidth="1" opacity="0.3" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#nursingPattern)" />
+          </svg>
+        </div>
+        <div className="mb-20 relative z-10">
           <motion.span 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
+            className="text-blue-400 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
           >
             [ SPECIALIZATIONS ]
           </motion.span>
@@ -268,7 +294,7 @@ export default function NursingPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase max-w-4xl"
+            className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase max-w-4xl text-white"
           >
             Advanced Career Pathways
           </motion.h2>
@@ -277,13 +303,13 @@ export default function NursingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="mt-8 text-[12px] font-medium tracking-wider text-gray-500 leading-relaxed uppercase max-w-2xl"
+            className="mt-8 text-[12px] font-medium tracking-wider text-slate-300 leading-relaxed uppercase max-w-2xl"
           >
             Explore advanced practice roles that offer higher clinical autonomy, leadership opportunities, and enhanced compensation across the global healthcare sector.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-gray-200 bg-white/90 backdrop-blur-sm">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-slate-700 bg-slate-900/50 backdrop-blur-sm relative z-10">
           {nursingPrograms.map((prog, idx) => (
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
@@ -291,21 +317,29 @@ export default function NursingPage() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
               key={idx} 
-              className="p-10 border-r border-b border-gray-200 hover:bg-slate-900 hover:text-white transition-colors duration-500 group flex flex-col"
+              className="p-10 border-r border-b border-slate-700 hover:bg-slate-800 transition-colors duration-500 group flex flex-col"
             >
-              <h3 className="text-xl font-medium tracking-tight uppercase text-slate-900 group-hover:text-white mb-6">
+              <div className="relative w-full h-[200px] mb-8 overflow-hidden rounded-sm">
+                <Image 
+                  src={prog.img}
+                  alt={prog.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <h3 className="text-xl font-medium tracking-tight uppercase text-white mb-6">
                 {prog.title}
               </h3>
-              <p className="text-[12px] text-gray-500 group-hover:text-gray-400 font-medium leading-relaxed tracking-wide mb-10 flex-1">
+              <p className="text-[12px] text-slate-400 group-hover:text-slate-300 font-medium leading-relaxed tracking-wide mb-10 flex-1">
                 {prog.desc}
               </p>
-              <div className="pt-6 border-t border-gray-200 group-hover:border-gray-700">
-                <span className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[10px] block mb-4">
+              <div className="pt-6 border-t border-slate-700 group-hover:border-slate-600">
+                <span className="text-blue-400 font-semibold tracking-[0.15em] uppercase text-[10px] block mb-4">
                   [ KEY HIGHLIGHTS ]
                 </span>
                 <ul className="space-y-2">
                   {prog.highlights.map((h, i) => (
-                    <li key={i} className="text-[11px] font-bold text-slate-900 group-hover:text-white uppercase tracking-wider">
+                    <li key={i} className="text-[11px] font-bold text-white uppercase tracking-wider">
                       {h}
                     </li>
                   ))}
@@ -315,8 +349,6 @@ export default function NursingPage() {
           ))}
         </div>
       </section>
-
-      <NursingTestimonials />
 
       {/* Final CTA - Sharp and Bold */}
       <section className="py-32 px-6 border-t border-gray-200 bg-white">
@@ -330,12 +362,9 @@ export default function NursingPage() {
             </h2>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-            <button className="bg-black text-white text-[11px] font-bold tracking-[0.2em] uppercase px-10 py-5 hover:bg-gray-800 transition-colors">
+            <Link href="/contact" className="bg-black text-white text-[11px] font-bold tracking-[0.2em] uppercase px-10 py-5 hover:bg-gray-800 transition-colors text-center inline-block">
               Book Consultation
-            </button>
-            <button className="bg-transparent border border-gray-200 text-slate-900 text-[11px] font-bold tracking-[0.2em] uppercase px-10 py-5 hover:bg-gray-50 transition-colors">
-              Download Guide
-            </button>
+            </Link>
           </div>
         </div>
       </section>

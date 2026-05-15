@@ -1,30 +1,26 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
-    {
-      src: "https://images.unsplash.com/photo-1544717305-996b815c338c?q=80&w=1920&auto=format&fit=crop",
-      title: "Study in Germany",
-      subtitle: "Bachelors • Masters • Ausbildung • Opportunity Card",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1920&auto=format&fit=crop",
-      title: "Nursing in America • Canada • Australia",
-      subtitle: "M.Sc Nursing • FNP • CNS • Paediatric & more",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1920&auto=format&fit=crop",
-      title: "MBBS in Central America",
-      subtitle: "Affordable medical degrees with global recognition",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1517520287167-4bbf64a00d66?q=80&w=1920&auto=format&fit=crop",
-      title: "MS • MD • MDS",
-      subtitle: "Postgraduate medical admissions made seamless",
-    },
-  ];
+  {
+    src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1920&auto=format&fit=crop",
+    title: "Global Education Pathways",
+    subtitle: "Turn Your Study Abroad Dream Into Reality",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1627556704353-016baeb12c79?q=80&w=1920&auto=format&fit=crop",
+    title: "Nursing & Medical Excellence",
+    subtitle: "Expert Guidance for Global Healthcare Careers",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1455734729978-db1ae4f687fc?q=80&w=1920&auto=format&fit=crop",
+    title: "Pioneer Your Future",
+    subtitle: "Comprehensive Support for International Admissions",
+  },
+];
 
 export function Hero() {
   const [activeSlide, setActiveSlide] = React.useState(0);
@@ -56,7 +52,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 flex flex-col justify-end h-full pb-48 md:pb-32">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 flex flex-col justify-end h-full pb-48 md:pb-32 lg:pb-24 xl:pb-20">
         <div className="max-w-3xl">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -83,9 +79,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-6 sm:mt-10"
           >
-            <button className="px-6 py-3 sm:px-8 sm:py-4 bg-white text-slate-900 font-medium text-[13px] sm:text-[15px] tracking-wide hover:bg-gray-100 transition-colors uppercase">
+            <Link href="/contact" className="inline-block px-6 py-3 sm:px-8 sm:py-4 bg-white text-slate-900 font-medium text-[13px] sm:text-[15px] tracking-wide hover:bg-gray-100 transition-colors uppercase">
               Get Free Consultation
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>

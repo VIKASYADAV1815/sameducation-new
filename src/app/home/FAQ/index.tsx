@@ -22,12 +22,12 @@ export const FAQ = () => {
   ];
 
   return (
-    <section className="relative py-24 bg-slate-50 font-sans border-b border-gray-200 overflow-hidden">
+    <section id="faq" className="relative py-24 bg-slate-50 font-sans border-b border-gray-200 overflow-hidden">
       {/* Background Image with low opacity */}
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1545679216-ad934fececb0?q=80&w=1170&auto=format&fit=crop" 
-          alt="Background" 
+          alt="Background pattern" 
           className="w-full h-full object-cover opacity-[0.10] grayscale"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-50/90 via-slate-50/60 to-slate-50/90" />
@@ -62,7 +62,7 @@ export const FAQ = () => {
                   <span className={`text-[13px] font-semibold tracking-wider uppercase transition-colors pr-4 ${isActive ? "text-blue-600" : "text-slate-900 group-hover:text-blue-600"}`}>
                     {faq.question}
                   </span>
-                  <div className={`shrink-0 text-gray-400 transition-colors ${isActive ? "text-blue-600" : "group-hover:text-blue-600"}`}>
+                  <div className={`shrink-0 transition-colors ${isActive ? "text-blue-600" : "text-gray-400 group-hover:text-blue-600"}`}>
                     <svg 
                       className={`w-5 h-5 transition-transform duration-300 ${isActive ? "rotate-180" : ""}`} 
                       fill="none" 

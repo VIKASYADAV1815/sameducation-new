@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { PopupEnquiryForm } from "@/components/PopupEnquiryForm";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,10 +22,6 @@ export const metadata: Metadata = {
   title: "SAMEDUCATION - Premium Educational Guidance",
   description: "Expert educational guidance and admissions support. Navigate your academic journey with our professional services.",
 };
-
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { PopupEnquiryForm } from "@/components/PopupEnquiryForm";
 
 export default function RootLayout({
   children,

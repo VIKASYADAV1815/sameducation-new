@@ -76,19 +76,19 @@ export const Footer = () => {
             <div className="bg-white/40 backdrop-blur-sm p-4 rounded-lg border border-white/60 hover:bg-white/60 transition-all duration-300">
               <h4 className="text-gray-900 font-bold mb-6 uppercase tracking-wider text-[11px] flex items-center"><span className="w-1 h-4 bg-blue-700 rounded mr-2"></span>Study Pathways</h4>
               <ul className="space-y-3 text-[12px] font-medium tracking-wide">
-                <li><Link href="/pathways/germany" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>Germany Bachelors/Masters</Link></li>
-                <li><Link href="/pathways/germany-ausbildung" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>Germany AUSBILDUNG</Link></li>
-                <li><Link href="/pathways/germany-opportunity-card" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>Opportunity Card</Link></li>
-                <li><Link href="/pathways/central-america-mbbs" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>MBBS in Central America</Link></li>
-                <li><Link href="/pathways/ms-md-mds" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>MS / MD / MDS</Link></li>
+                <li><Link href="/pg-germany" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>Germany Bachelors/Masters</Link></li>
+                <li><Link href="/pg-germany" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>Germany AUSBILDUNG</Link></li>
+                <li><Link href="/pg-germany" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>Opportunity Card</Link></li>
+                <li><Link href="/mbbs" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>MBBS Abroad</Link></li>
+                <li><Link href="/ms-md-mds" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>MS / MD / MDS</Link></li>
               </ul>
             </div>
             <div className="bg-white/40 backdrop-blur-sm p-4 rounded-lg border border-white/60 hover:bg-white/60 transition-all duration-300">
               <h4 className="text-gray-900 font-bold mb-6 uppercase tracking-wider text-[11px] flex items-center"><span className="w-1 h-4 bg-cyan-600 rounded mr-2"></span>Quick Links</h4>
               <ul className="space-y-3 text-[12px] font-medium tracking-wide">
-                <li><Link href="/about" className="text-gray-700 hover:text-cyan-600 transition-colors flex items-center"><span className="mr-2">→</span>About Us</Link></li>
-                <li><Link href="/testimonials" className="text-gray-700 hover:text-cyan-600 transition-colors flex items-center"><span className="mr-2">→</span>Success Stories</Link></li>
-                <li><Link href="/faq" className="text-gray-700 hover:text-cyan-600 transition-colors flex items-center"><span className="mr-2">→</span>FAQ</Link></li>
+                <li><Link href="/#about" className="text-gray-700 hover:text-cyan-600 transition-colors flex items-center"><span className="mr-2">→</span>About Us</Link></li>
+                <li><Link href="/#testimonials" className="text-gray-700 hover:text-cyan-600 transition-colors flex items-center"><span className="mr-2">→</span>Success Stories</Link></li>
+                <li><Link href="/#faq" className="text-gray-700 hover:text-cyan-600 transition-colors flex items-center"><span className="mr-2">→</span>FAQ</Link></li>
                 <li><Link href="/contact" className="text-gray-700 hover:text-cyan-600 transition-colors flex items-center"><span className="mr-2">→</span>Contact Us</Link></li>
               </ul>
             </div>
@@ -97,13 +97,6 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t-2 border-gray-300 text-xs sm:text-sm text-gray-600">
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-4 md:mb-0">
-            <Link href="#" className="hover:text-blue-600 transition-colors hover:underline">Refund Policy</Link>
-            <Link href="#" className="hover:text-blue-600 transition-colors hover:underline">Terms & Conditions</Link>
-            <Link href="#" className="hover:text-blue-600 transition-colors hover:underline">Anti Fraud Policy</Link>
-            <Link href="#" className="hover:text-blue-600 transition-colors hover:underline">Privacy Policy</Link>
-            <Link href="#" className="hover:text-blue-600 transition-colors hover:underline">Sitemap</Link>
-          </div>
           <p className="text-gray-700 font-semibold">© {new Date().getFullYear()} SAMEDUCATION. All rights reserved.</p>
         </div>
       </div>

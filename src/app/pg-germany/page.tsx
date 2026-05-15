@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { PGGermanyTestimonials } from "@/components/Testimonials/PGGermanyTestimonials";
 import { ArrowUpRight } from "lucide-react";
 
 export default function PGGermanyPage() {
@@ -12,24 +11,28 @@ export default function PGGermanyPage() {
     {
       id: "01",
       title: "MEDICAL PG (APPROBATION)",
+      img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop",
       desc: "Super specialization without competitive MCQ exams. Work as a fully-paid doctor (Assistenzarzt) while pursuing your Medical PG. The specialist degree (Facharzt) is a by-product of your employment.",
       highlights: ["No Tuition Fees", "Earn While You Learn", "FSP & KP Exam Prep", "Direct Hospital Placement"]
     },
     {
       id: "02",
       title: "MASTERS IN GERMANY",
+      img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop",
       desc: "Pursue globally acclaimed Master's programs in engineering, management, and sciences. Germany's cost-effective education features mostly tuition-free programs at public universities.",
       highlights: ["Public Universities", "Post-Study Work Visa", "English Taught Programs", "APS Certification Support"]
     },
     {
       id: "03",
       title: "AUSBILDUNG (VOCATIONAL)",
+      img: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=800&auto=format&fit=crop",
       desc: "Germany's dual vocational training system. Work as an apprentice in a German company while attending vocational school. Gain a highly respected German qualification and a steady income.",
       highlights: ["Nursing & IT Focus", "Guaranteed Stipend", "B2 German Required", "Direct Employment"]
     },
     {
       id: "04",
       title: "OPPORTUNITY CARD (CHANCENKARTE)",
+      img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop",
       desc: "The new points-based immigration system allowing skilled workers to enter Germany for up to one year to find employment or explore Ausbildung opportunities.",
       highlights: ["No Prior Job Offer Needed", "Points Based System", "Part-Time Work Allowed", "Fast-Track Visa"]
     }
@@ -39,12 +42,12 @@ export default function PGGermanyPage() {
     <main className="min-h-screen bg-white font-sans text-slate-900">
       
       {/* Hero Section */}
-      <section className="relative h-[70vh] w-full flex items-end pb-24 overflow-hidden bg-slate-900">
+      <section className="relative h-[75vh] w-full flex items-end pb-16 pt-32 overflow-hidden bg-slate-900">
         <Image
           src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1920&auto=format&fit=crop"
           alt="Medical PG in Germany"
           fill
-          className="object-cover opacity-30 grayscale"
+          className="object-cover opacity-60"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
@@ -77,10 +80,17 @@ export default function PGGermanyPage() {
       </section>
 
       {/* Pathways Grid */}
-      <section className="relative py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-b border-gray-200">
-        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none -z-10" />
+      <section className="relative py-32 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-b border-gray-200 bg-slate-50">
+        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+          <Image 
+            src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1920&auto=format&fit=crop" 
+            alt="Pattern background" 
+            fill 
+            className="object-cover opacity-[0.15] mix-blend-multiply" 
+          />
+        </div>
         
-        <div className="mb-20">
+        <div className="mb-20 relative z-10">
           <motion.span 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -99,7 +109,7 @@ export default function PGGermanyPage() {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-gray-200 bg-white/90 backdrop-blur-sm">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-gray-200 bg-white/90 backdrop-blur-sm relative z-10">
           {pathways.map((pathway, idx) => (
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
@@ -109,6 +119,14 @@ export default function PGGermanyPage() {
               key={pathway.id} 
               className="p-10 border-r border-b border-gray-200 hover:bg-slate-900 hover:text-white transition-colors duration-500 group flex flex-col relative"
             >
+              <div className="relative w-full h-[220px] mb-8 overflow-hidden rounded-sm">
+                <Image 
+                  src={pathway.img}
+                  alt={pathway.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
               <div className="text-5xl md:text-6xl font-light text-slate-200 mb-8 transition-colors duration-500 group-hover:text-blue-600">
                 {pathway.id}
               </div>
@@ -141,13 +159,21 @@ export default function PGGermanyPage() {
       </section>
 
       {/* Roadmap */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-b border-gray-200">
-        <div className="mb-20">
+      <section className="relative py-32 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-b border-slate-700 bg-slate-900 text-white">
+        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+          <Image 
+            src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1920&auto=format&fit=crop" 
+            alt="Pattern background dark" 
+            fill 
+            className="object-cover opacity-20 mix-blend-overlay" 
+          />
+        </div>
+        <div className="mb-20 relative z-10">
           <motion.span 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
+            className="text-blue-400 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
           >
             [ THE FACHARZT ROADMAP ]
           </motion.span>
@@ -155,13 +181,13 @@ export default function PGGermanyPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase max-w-4xl"
+            className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase max-w-4xl text-white"
           >
             Medical Specialization Process
           </motion.h2>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col relative z-10">
           {[
             { step: "01", title: "GERMAN LANGUAGE MASTERY", desc: "Master German from A1 to B2 level. Strong communication is non-negotiable for working in German hospitals." },
             { step: "02", title: "DEFİZITBESCHEID & VISA", desc: "Document assessment by the German medical council and applying for the correct medical visa." },
@@ -175,22 +201,22 @@ export default function PGGermanyPage() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1 }}
               key={index}
-              className="group flex flex-col md:flex-row items-start md:items-center py-12 border-t border-gray-200 relative hover:bg-gray-50 transition-colors -mx-6 px-6 md:-mx-12 md:px-12 lg:-mx-24 lg:px-24"
+              className="group flex flex-col md:flex-row items-start md:items-center py-12 border-t border-slate-700 relative hover:bg-slate-800 transition-colors -mx-6 px-6 md:-mx-12 md:px-12 lg:-mx-24 lg:px-24"
             >
-              <div className="text-5xl md:text-6xl font-light text-slate-900 w-24 md:w-48 shrink-0 mb-6 md:mb-0 transition-colors duration-500 group-hover:text-blue-600">
+              <div className="text-5xl md:text-6xl font-light text-slate-600 w-24 md:w-48 shrink-0 mb-6 md:mb-0 transition-colors duration-500 group-hover:text-blue-400">
                 {item.step}
               </div>
               <div className="flex-1 md:pr-16 flex flex-col justify-center">
-                <h3 className="text-xl md:text-3xl font-medium tracking-tight uppercase text-slate-900 mb-4">
+                <h3 className="text-xl md:text-3xl font-medium tracking-tight uppercase text-white mb-4">
                   {item.title}
                 </h3>
-                <p className="text-[12px] font-medium tracking-wider text-gray-500 leading-relaxed uppercase max-w-3xl">
+                <p className="text-[12px] font-medium tracking-wider text-slate-400 leading-relaxed uppercase max-w-3xl">
                   {item.desc}
                 </p>
               </div>
             </motion.div>
           ))}
-          <div className="border-t border-gray-200" />
+          <div className="border-t border-slate-700" />
         </div>
       </section>
 
@@ -253,8 +279,6 @@ export default function PGGermanyPage() {
           </div>
         </div>
       </section>
-
-      <PGGermanyTestimonials />
     </main>
   );
 }

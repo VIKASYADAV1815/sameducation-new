@@ -12,23 +12,23 @@ export default function MSMDMDSPage() {
     { title: "Pediatrics", img: "https://images.unsplash.com/photo-1581594549595-35f6edc7b762?q=80&w=400&auto=format&fit=crop" },
     { title: "Orthopedics", img: "https://images.unsplash.com/photo-1583324113626-70df0f4deaab?q=80&w=400&auto=format&fit=crop" },
     { title: "Obstetrics", img: "https://images.unsplash.com/photo-1531983412531-1f49a365ffed?q=80&w=400&auto=format&fit=crop" },
-    { title: "General Surgery", img: "https://images.unsplash.com/photo-1551076805-e1869043e560?q=80&w=400&auto=format&fit=crop" },
-    { title: "Anesthesiology", img: "https://images.unsplash.com/photo-1582719471328-98e6c75c87f9?q=80&w=400&auto=format&fit=crop" },
+    { title: "General Surgery", img: "https://images.unsplash.com/photo-1551076805-e1869043e560?q=80&w=400&auto=format&fit=crop&brightness=0.7" },
+    { title: "Anesthesiology", img: "https://images.unsplash.com/photo-1512678080530-7760d81faba6?q=80&w=400&auto=format&fit=crop&brightness=0.7" },
   ];
 
   return (
     <main className="min-h-screen bg-white font-sans text-slate-900">
       
       {/* Hero Section */}
-      <section className="relative h-[70vh] w-full flex items-end pb-24 overflow-hidden bg-slate-900">
+      <section className="relative h-[75vh] w-full flex items-end pb-16 pt-32 overflow-hidden bg-slate-900">
         <Image
-          src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1920&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1920&auto=format&fit=crop"
           alt="MS MD MDS"
           fill
-          className="object-cover opacity-30 grayscale"
+          className="object-cover opacity-60"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent" />
         
         <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24">
           <motion.span 
@@ -58,10 +58,17 @@ export default function MSMDMDSPage() {
       </section>
 
       {/* Strategic Planning */}
-      <section className="relative py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-b border-gray-200">
-        <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#f8fafc_10px,#f8fafc_11px)] opacity-50 pointer-events-none -z-10" />
+      <section className="relative py-32 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-b border-gray-200 bg-slate-50">
+        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+          <Image 
+            src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1920&auto=format&fit=crop" 
+            alt="Pattern background" 
+            fill 
+            className="object-cover opacity-[0.15] mix-blend-multiply" 
+          />
+        </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
           <div>
             <motion.span 
               initial={{ opacity: 0, x: -20 }}
@@ -118,7 +125,7 @@ export default function MSMDMDSPage() {
               src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1200&auto=format&fit=crop"
               alt="Surgical Team"
               fill
-              className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              className="object-cover transition-all duration-700 hover:scale-105"
             />
           </div>
         </div>
@@ -180,13 +187,21 @@ export default function MSMDMDSPage() {
       </section>
 
       {/* 3-Step Strategy */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto">
-        <div className="mb-20">
+      <section className="relative py-32 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto bg-slate-900 text-white">
+        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+          <Image 
+            src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1920&auto=format&fit=crop" 
+            alt="Pattern background dark" 
+            fill 
+            className="object-cover opacity-20 mix-blend-overlay" 
+          />
+        </div>
+        <div className="mb-20 relative z-10">
           <motion.span 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
+            className="text-blue-400 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
           >
             [ THE METHODOLOGY ]
           </motion.span>
@@ -194,13 +209,13 @@ export default function MSMDMDSPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase max-w-4xl"
+            className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase max-w-4xl text-white"
           >
             Our 3-Step Strategy
           </motion.h2>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col relative z-10">
           {[
             { step: "01", title: "PROFILE EVALUATION", desc: "We rigorously analyze your academic background, NEET PG/MDS test scores, and clinical experience to shortlist the best-fit institutions and programs for your specialization goals." },
             { step: "02", title: "APPLICATION STRATEGY", desc: "Our experts assist with crafting compelling statements of purpose, optimizing your medical resume, and ensuring all documentation meets the strict criteria of top medical boards and universities." },
@@ -212,22 +227,22 @@ export default function MSMDMDSPage() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1 }}
               key={index}
-              className="group flex flex-col md:flex-row items-start md:items-center py-12 border-t border-gray-200 relative hover:bg-gray-50 transition-colors -mx-6 px-6 md:-mx-12 md:px-12 lg:-mx-24 lg:px-24"
+              className="group flex flex-col md:flex-row items-start md:items-center py-12 border-t border-slate-700 relative hover:bg-slate-800 transition-colors -mx-6 px-6 md:-mx-12 md:px-12 lg:-mx-24 lg:px-24"
             >
-              <div className="text-5xl md:text-6xl font-light text-slate-900 w-24 md:w-48 shrink-0 mb-6 md:mb-0 transition-colors duration-500 group-hover:text-blue-600">
+              <div className="text-5xl md:text-6xl font-light text-slate-600 w-24 md:w-48 shrink-0 mb-6 md:mb-0 transition-colors duration-500 group-hover:text-blue-400">
                 {item.step}
               </div>
               <div className="flex-1 md:pr-16 flex flex-col justify-center">
-                <h3 className="text-xl md:text-3xl font-medium tracking-tight uppercase text-slate-900 mb-4">
+                <h3 className="text-xl md:text-3xl font-medium tracking-tight uppercase text-white mb-4">
                   {item.title}
                 </h3>
-                <p className="text-[12px] font-medium tracking-wider text-gray-500 leading-relaxed uppercase max-w-3xl">
+                <p className="text-[12px] font-medium tracking-wider text-slate-400 leading-relaxed uppercase max-w-3xl">
                   {item.desc}
                 </p>
               </div>
             </motion.div>
           ))}
-          <div className="border-t border-gray-200" />
+          <div className="border-t border-slate-700" />
         </div>
       </section>
     </main>

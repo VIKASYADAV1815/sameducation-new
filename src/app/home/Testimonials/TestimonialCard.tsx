@@ -17,7 +17,7 @@ export function TestimonialCard({ quote, author, role, avatarUrl, className, ...
           {avatarUrl ? (
             <img src={avatarUrl} alt={author} className="w-full h-full object-cover" />
           ) : (
-            <div className="w-full h-full flex items-center justify-center bg-primary text-white font-bold">
+            <div className="w-full h-full flex items-center justify-center bg-blue-600 text-white font-bold">
               {author.charAt(0)}
             </div>
           )}

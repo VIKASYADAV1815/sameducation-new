@@ -7,3 +7,4 @@ export * from "./Study";
 export * from "./ConsultantInfo";
 export * from "./GlobalIndian";
 export * from "./FAQ";
+export * from "./NursingPrograms";

@@ -2,11 +2,16 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+
+  // Pages with light backgrounds at the top
+  const isLightHero = pathname?.startsWith("/contact");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,12 +66,12 @@ export const Header = () => {
             key={item.name}
             href={item.path}
             className={`group relative text-[11px] font-bold tracking-[0.22em] transition-colors duration-300 ${
-              isScrolled ? "text-slate-900" : "text-white drop-shadow-md"
+              isScrolled || isLightHero ? "text-slate-900" : "text-white drop-shadow-md"
             }`}
           >
             {item.name}
             <span className={`absolute -bottom-2 left-0 h-[1.5px] w-0 transition-all duration-500 ease-in-out group-hover:w-full ${
-              isScrolled ? "bg-blue-600" : "bg-white"
+              isScrolled || isLightHero ? "bg-blue-600" : "bg-white"
             }`} />
           </Link>
         ))}
@@ -81,15 +86,15 @@ export const Header = () => {
         >
           <div className="space-y-1.5">
             <span className={`block w-6 h-0.5 transition-all duration-500 transform ${
-              isScrolled || isMobileMenuOpen ? "bg-slate-900" : "bg-white"
+              isScrolled || isLightHero || isMobileMenuOpen ? "bg-slate-900" : "bg-white"
             } ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""}`} />
             
             <span className={`block w-6 h-0.5 transition-all duration-300 ${
-              isScrolled || isMobileMenuOpen ? "bg-slate-900" : "bg-white"
+              isScrolled || isLightHero || isMobileMenuOpen ? "bg-slate-900" : "bg-white"
             } ${isMobileMenuOpen ? "opacity-0" : "opacity-100"}`} />
             
             <span className={`block w-4 h-0.5 transition-all duration-500 transform ${
-              isScrolled || isMobileMenuOpen ? "bg-slate-900" : "bg-white"
+              isScrolled || isLightHero || isMobileMenuOpen ? "bg-slate-900" : "bg-white"
             } ${isMobileMenuOpen ? "-rotate-45 -translate-y-2 w-6" : ""}`} />
           </div>
         </button>

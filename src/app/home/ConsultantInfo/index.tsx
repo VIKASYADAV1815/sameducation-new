@@ -12,7 +12,7 @@ export const ConsultantInfo = () => {
   ];
 
   return (
-    <section className="w-full bg-white text-slate-900 font-sans border-b border-gray-200">
+    <section id="about" className="w-full bg-slate-50 text-slate-900 font-sans border-b border-gray-200">
       <div className="flex flex-col lg:flex-row w-full max-w-[1600px] mx-auto items-center">
         
         {/* Left Content Area - Image */}
@@ -29,7 +29,7 @@ export const ConsultantInfo = () => {
         </div>
 
         {/* Right Content Area - Text & Scrollable List */}
-        <div className="w-full lg:w-7/12 px-8 py-16 md:px-12 lg:py-24 xl:pr-24 flex flex-col justify-center bg-white h-full lg:h-[800px]">
+        <div className="w-full lg:w-7/12 px-8 py-16 md:px-12 lg:py-24 xl:pr-24 flex flex-col justify-center bg-slate-50 h-full lg:h-[800px]">
           <div className="max-w-2xl w-full flex flex-col h-full">
             <span className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-xs mb-6 block shrink-0">
               [ LEGAL & LICENSED ]

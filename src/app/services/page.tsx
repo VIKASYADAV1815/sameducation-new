@@ -8,48 +8,66 @@ export default function ServicesPage() {
   const services = [
     {
       id: "01",
-      title: "Dependent Visa / Visa Extension Assistance",
-      desc: "We have an efficient and experienced Operations Team that gives end-to-end admission and visa filing assistance. Our team is spread across domestic and international offices. Once you move overseas, we continue to help you in filing Dependent Visas, Visa Extensions, and taking admission in new study programs. We handhold you not only in your home country but even after you move.",
+      title: "PROFILE EVALUATION",
+      img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop",
+      desc: "Comprehensive assessment of academic records, language proficiency, and career goals to identify the best global pathways.",
+      details: ["Academic Transcript Review", "Language Proficiency Check", "Career Path Alignment", "Budget & Scholarship Assessment"]
     },
     {
       id: "02",
-      title: "Airport Transfers",
-      desc: "We facilitate airport pickups from international airports to your new home. We make sure that you reach your destination safely and comfortably. A staff member is present at the airport to welcome you.",
+      title: "UNIVERSITY SELECTION",
+      img: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop",
+      desc: "Curating a tailored list of top-tier, recognized institutions worldwide that match your profile and aspirations.",
+      details: ["Program Matching", "Accreditation Verification", "Acceptance Rate Analysis", "Application Timeline Planning"]
     },
     {
       id: "03",
-      title: "Accommodation",
-      desc: "We assist you in finding safe and comfortable housing arrangements in any country you go to. We help you through our large alumni network so your family can rest knowing you will stay in pleasant surroundings at convenient locations.",
+      title: "ADMISSION ASSISTANCE",
+      img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
+      desc: "End-to-end support in preparing compelling applications, statements of purpose, and organizing necessary documentation.",
+      details: ["SOP & Resume Drafting", "LOR Guidance", "Application Form Filling", "Document Legalization & Apostille"]
     },
     {
       id: "04",
-      title: "Immigration Consulting",
-      desc: "Our in-house Regulated Immigration Consultants are licensed to represent you in Temporary and Permanent Residence applications. With deep knowledge of immigration laws, we ensure a smooth process from documentation to permit acquisition.",
+      title: "VISA PROCESSING",
+      img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop",
+      desc: "Navigating complex visa regulations with high success rates through meticulous documentation and interview preparation.",
+      details: ["Financial Proof Guidance", "Visa Form Filling", "Mock Visa Interviews", "Embassy Appointment Booking"]
     },
     {
       id: "05",
-      title: "Job Placement Assistance",
-      desc: "We help you find both part-time and full-time job opportunities. As one of our students, you can also look forward to job opportunities within our extensive international organizational network.",
+      title: "FINANCIAL AID & LOANS",
+      img: "https://images.unsplash.com/photo-1554224154-26032ffc0d04?q=80&w=800&auto=format&fit=crop",
+      desc: "Connecting students with trusted financial partners to secure education loans and identifying scholarship opportunities.",
+      details: ["Education Loan Assistance", "Scholarship Hunting", "Sponsor Documentation", "Fee Payment Guidance"]
     },
     {
       id: "06",
-      title: "Pastoral Support",
-      desc: "We provide pastoral support to ensure your general wellbeing and to improve your social, emotional, as well as behavioural skills in an environment that is new and alien to you.",
+      title: "PRE-DEPARTURE BRIEFING",
+      img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=800&auto=format&fit=crop",
+      desc: "Preparing students for cultural transition, essential packing, travel arrangements, and what to expect upon arrival.",
+      details: ["Cultural Orientation", "Forex & Forex Cards", "Travel & Health Insurance", "Flight Ticketing Assistance"]
     },
     {
       id: "07",
-      title: "NCLEX-RN & OBA Exam Preparation",
-      desc: "Our trainers prepare you to pass the National Council Licensure Examination (NCLEX-RN) and Australian OBA. You will be provided with individual feedback and a study plan. We also assist with the application process from the initial assessment stage to obtaining licensure.",
+      title: "POST-ARRIVAL SUPPORT",
+      img: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=800&auto=format&fit=crop",
+      desc: "Our on-ground network ensures a smooth transition with pickup, accommodation, and local registration assistance.",
+      details: ["Airport Pickup", "Accommodation Search", "Local Sim & Bank Account", "University Registration Setup"]
     },
     {
       id: "08",
-      title: "Nursing Licensure Application",
-      desc: "At our global facilities, we offer comprehensive assistance with the nursing licensure application. Our dedicated team is equipped to guide you through every step, ensuring that your application is completed accurately and efficiently.",
+      title: "LANGUAGE TRAINING",
+      img: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=800&auto=format&fit=crop",
+      desc: "In-house coaching for essential proficiency tests to meet the admission criteria of international universities.",
+      details: ["IELTS & TOEFL Prep", "German A1-B2 Coaching", "Mock Tests", "Study Materials"]
     },
     {
       id: "09",
-      title: "IELTS / PTE / German Training",
-      desc: "We offer comprehensive language training tailored specifically for healthcare and medical professionals. Our expert trainers cover all modules, providing personalized feedback and proven strategies. Training includes regular mock tests to simulate the actual exam environment.",
+      title: "CAREER COUNSELING",
+      img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop",
+      desc: "Guiding students beyond education towards global career opportunities, licensing exams, and post-study work visas.",
+      details: ["Post-Study Work Visa Guidance", "Licensing Exam Info (USMLE, NMC)", "Resume Building", "Global Job Market Insights"]
     }
   ];
 
@@ -57,12 +75,12 @@ export default function ServicesPage() {
     <main className="min-h-screen bg-white font-sans text-slate-900">
       
       {/* Hero Section */}
-      <section className="relative h-[70vh] w-full flex items-end pb-24 overflow-hidden bg-slate-900">
+      <section className="relative h-[75vh] w-full flex items-end pb-16 pt-32 overflow-hidden bg-slate-900">
         <Image
           src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1920&auto=format&fit=crop"
           alt="Our Services"
           fill
-          className="object-cover opacity-30 grayscale"
+          className="object-cover opacity-60"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
@@ -95,10 +113,17 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="relative py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-b border-gray-200">
-        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none -z-10" />
+      <section className="relative py-32 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-b border-gray-200 bg-slate-50">
+        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+          <Image 
+            src="https://images.unsplash.com/photo-1551076805-e1869043e560?q=80&w=1920&auto=format&fit=crop" 
+            alt="Pattern background" 
+            fill 
+            className="object-cover opacity-[0.15] mix-blend-multiply" 
+          />
+        </div>
         
-        <div className="mb-20">
+        <div className="mb-20 relative z-10">
           <motion.span 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -151,14 +176,22 @@ export default function ServicesPage() {
       </section>
 
       {/* Global Presence Section */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="relative py-32 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto bg-slate-900 text-white">
+        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+          <Image 
+            src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1920&auto=format&fit=crop" 
+            alt="Pattern background dark" 
+            fill 
+            className="object-cover opacity-20 mix-blend-overlay" 
+          />
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
           <div>
             <motion.span 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
+              className="text-blue-400 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
             >
               [ BEYOND BORDERS ]
             </motion.span>
@@ -166,36 +199,36 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase mb-10"
+              className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase mb-10 text-white"
             >
-              With You, <br/><span className="text-blue-600">Every Step of the Way.</span>
+              With You, <br/><span className="text-blue-400">Every Step of the Way.</span>
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-[12px] font-medium tracking-wider text-gray-500 leading-relaxed uppercase mb-12 max-w-xl"
+              className="text-[12px] font-medium tracking-wider text-slate-300 leading-relaxed uppercase mb-12 max-w-xl"
             >
               Our support doesn't end when you board your flight. With a robust international network and local offices in key destination countries, we provide on-the-ground pastoral care, accommodation assistance, and emergency support.
             </motion.p>
-            <div className="grid grid-cols-2 gap-8 border-t border-gray-200 pt-10">
-              <div className="border-l border-gray-200 pl-6">
-                <div className="text-4xl font-light text-slate-900 mb-2">24/7</div>
-                <div className="text-[10px] tracking-[0.15em] uppercase font-bold text-gray-500">Emergency Support</div>
+            <div className="grid grid-cols-2 gap-8 border-t border-slate-700 pt-10">
+              <div className="border-l border-slate-700 pl-6">
+                <div className="text-4xl font-light text-white mb-2">24/7</div>
+                <div className="text-[10px] tracking-[0.15em] uppercase font-bold text-slate-400">Emergency Support</div>
               </div>
-              <div className="border-l border-gray-200 pl-6">
-                <div className="text-4xl font-light text-slate-900 mb-2">10+</div>
-                <div className="text-[10px] tracking-[0.15em] uppercase font-bold text-gray-500">Global Offices</div>
+              <div className="border-l border-slate-700 pl-6">
+                <div className="text-4xl font-light text-white mb-2">10+</div>
+                <div className="text-[10px] tracking-[0.15em] uppercase font-bold text-slate-400">Global Offices</div>
               </div>
             </div>
           </div>
-          <div className="relative h-[600px] w-full bg-slate-100 overflow-hidden shadow-2xl">
+          <div className="relative h-[600px] w-full bg-slate-800 overflow-hidden shadow-2xl rounded-sm">
              <Image
                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop"
                alt="Global Network"
                fill
-               className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+               className="object-cover transition-all duration-700 hover:scale-105"
              />
           </div>
         </div>

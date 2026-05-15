@@ -3,8 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MBBSTestimonials } from "@/components/Testimonials/MBBSTestimonials";
-import { ArrowUpRight } from "lucide-react";
 
 export default function MBBSPage() {
   const regions = [
@@ -12,6 +10,7 @@ export default function MBBSPage() {
       id: "01",
       name: "CENTRAL AMERICA (CARIBBEAN)",
       focus: "USMLE Pathway & Clinicals in USA",
+      img: "https://images.unsplash.com/photo-1599045118108-bf9954418b76?q=80&w=800&auto=format&fit=crop",
       desc: "The Caribbean pathway is specifically designed for students aiming for medical residency in the United States. Universities follow a US-based curriculum, preparing students for USMLE Step 1 and Step 2 from day one.",
       highlights: ["Direct US Clinical Rotations", "High USMLE Pass Rates", "English Medium Instruction", "No IELTS/TOEFL Required for Admission"]
     },
@@ -19,6 +18,7 @@ export default function MBBSPage() {
       id: "02",
       name: "EUROPE",
       focus: "Affordable European Standard Education",
+      img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop",
       desc: "Study in culturally rich, technologically advanced European nations like Georgia, Poland, and Italy. Degrees are universally recognized, offering a strong foundation for both clinical practice and research.",
       highlights: ["WHO & NMC Recognized", "State-of-the-Art Infrastructure", "Global Clinical Exposure", "Safe & Student-Friendly Environment"]
     },
@@ -26,6 +26,7 @@ export default function MBBSPage() {
       id: "03",
       name: "INDIA",
       focus: "Expert Domestic Counseling",
+      img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop",
       desc: "For those preferring to stay closer to home, we provide expert admission guidance for top medical colleges in India, ensuring you navigate the competitive landscape and cut-offs effectively.",
       highlights: ["NRI Seat Assistance", "Counseling Updates", "Budget-Friendly Options", "End-to-End Admission Support"]
     }
@@ -42,12 +43,12 @@ export default function MBBSPage() {
     <main className="min-h-screen bg-white font-sans text-slate-900">
       
       {/* Hero Section */}
-      <section className="relative h-[70vh] w-full flex items-end pb-24 overflow-hidden bg-slate-900">
+      <section className="relative h-[75vh] w-full flex items-end pb-16 pt-32 overflow-hidden bg-slate-900">
         <Image
-          src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1920&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1625134673337-519d4d10b313?q=80&w=1920&auto=format&fit=crop"
           alt="MBBS in Central America and Europe"
           fill
-          className="object-cover opacity-30 grayscale"
+          className="object-cover opacity-60"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
@@ -80,10 +81,17 @@ export default function MBBSPage() {
       </section>
 
       {/* Regions Grid */}
-      <section className="relative py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-b border-gray-200">
-        <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#f8fafc_10px,#f8fafc_11px)] opacity-50 pointer-events-none -z-10" />
+      <section className="relative py-32 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-b border-gray-200 bg-slate-50">
+        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+          <Image 
+            src="https://images.unsplash.com/photo-1628595351029-c2bf17511435?q=80&w=1920&auto=format&fit=crop" 
+            alt="Pattern background" 
+            fill 
+            className="object-cover opacity-[0.15] mix-blend-multiply" 
+          />
+        </div>
         
-        <div className="mb-20">
+        <div className="mb-20 relative z-10">
           <motion.span 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -112,6 +120,14 @@ export default function MBBSPage() {
               key={region.name} 
               className="flex flex-col border-r border-b border-gray-200 p-10 hover:bg-gray-50 transition-colors duration-500 group relative"
             >
+              <div className="relative w-full h-[240px] mb-8 overflow-hidden rounded-sm">
+                <Image 
+                  src={region.img}
+                  alt={region.name}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
               <div className="text-5xl md:text-6xl font-light text-slate-200 mb-8 transition-colors duration-500 group-hover:text-blue-600">
                 {region.id}
               </div>
@@ -144,14 +160,22 @@ export default function MBBSPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto">
-        <div className="flex flex-col lg:flex-row gap-16">
+      <section className="relative py-32 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto bg-slate-900 text-white">
+        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+          <Image 
+            src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1920&auto=format&fit=crop" 
+            alt="Pattern background dark" 
+            fill 
+            className="object-cover opacity-20" 
+          />
+        </div>
+        <div className="flex flex-col lg:flex-row gap-16 relative z-10">
           <div className="w-full lg:w-1/2">
             <motion.span 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
+              className="text-blue-400 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
             >
               [ THE SAMEDUCATION ADVANTAGE ]
             </motion.span>
@@ -159,32 +183,32 @@ export default function MBBSPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase mb-10"
+              className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase mb-10 text-white"
             >
               18 Years of Medical Admissions Success
             </motion.h2>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <div className="border-l border-gray-200 pl-6">
-                <div className="text-4xl font-light text-slate-900 mb-2">31k+</div>
-                <div className="text-[10px] font-bold tracking-[0.15em] uppercase text-gray-500">Successful Placements</div>
+              <div className="border-l border-slate-700 pl-6">
+                <div className="text-4xl font-light text-white mb-2">31k+</div>
+                <div className="text-[10px] font-bold tracking-[0.15em] uppercase text-slate-400">Successful Placements</div>
               </div>
-              <div className="border-l border-gray-200 pl-6">
-                <div className="text-4xl font-light text-slate-900 mb-2">600+</div>
-                <div className="text-[10px] font-bold tracking-[0.15em] uppercase text-gray-500">University Tie-Ups</div>
+              <div className="border-l border-slate-700 pl-6">
+                <div className="text-4xl font-light text-white mb-2">600+</div>
+                <div className="text-[10px] font-bold tracking-[0.15em] uppercase text-slate-400">University Tie-Ups</div>
               </div>
-              <div className="border-l border-gray-200 pl-6">
-                <div className="text-4xl font-light text-slate-900 mb-2">99%</div>
-                <div className="text-[10px] font-bold tracking-[0.15em] uppercase text-gray-500">Visa Success Rate</div>
+              <div className="border-l border-slate-700 pl-6">
+                <div className="text-4xl font-light text-white mb-2">99%</div>
+                <div className="text-[10px] font-bold tracking-[0.15em] uppercase text-slate-400">Visa Success Rate</div>
               </div>
-              <div className="border-l border-gray-200 pl-6">
-                <div className="text-4xl font-light text-slate-900 mb-2">350+</div>
-                <div className="text-[10px] font-bold tracking-[0.15em] uppercase text-gray-500">Expert Counselors</div>
+              <div className="border-l border-slate-700 pl-6">
+                <div className="text-4xl font-light text-white mb-2">350+</div>
+                <div className="text-[10px] font-bold tracking-[0.15em] uppercase text-slate-400">Expert Counselors</div>
               </div>
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-gray-200">
+          <div className="w-full lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-slate-700">
             {features.map((feature, idx) => (
               <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -192,12 +216,12 @@ export default function MBBSPage() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
                 key={idx} 
-                className="p-8 border-r border-b border-gray-200 hover:bg-slate-900 hover:text-white transition-colors duration-500 group"
+                className="p-8 border-r border-b border-slate-700 hover:bg-slate-800 transition-colors duration-500 group bg-slate-900/50 backdrop-blur-sm"
               >
-                <h3 className="text-sm font-bold tracking-widest uppercase mb-4 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-sm font-bold tracking-widest uppercase mb-4 text-white group-hover:text-blue-400 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-[12px] text-gray-500 group-hover:text-gray-400 font-medium leading-relaxed tracking-wide">
+                <p className="text-[12px] text-slate-400 font-medium leading-relaxed tracking-wide">
                   {feature.desc}
                 </p>
               </motion.div>
@@ -206,10 +230,8 @@ export default function MBBSPage() {
         </div>
       </section>
 
-      <MBBSTestimonials />
 
-      {/* FAQ */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-t border-gray-200">
+<section className="py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-t border-gray-200">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block">
