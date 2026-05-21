@@ -5,253 +5,411 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function MBBSPage() {
-  const regions = [
+  const universities = [
     {
       id: "01",
-      name: "CENTRAL AMERICA (CARIBBEAN)",
-      focus: "USMLE Pathway & Clinicals in USA",
-      img: "https://images.unsplash.com/photo-1599045118108-bf9954418b76?q=80&w=800&auto=format&fit=crop",
-      desc: "The Caribbean pathway is specifically designed for students aiming for medical residency in the United States. Universities follow a US-based curriculum, preparing students for USMLE Step 1 and Step 2 from day one.",
-      highlights: ["Direct US Clinical Rotations", "High USMLE Pass Rates", "English Medium Instruction", "No IELTS/TOEFL Required for Admission"]
+      name: "ALL AMERICAN INSTITUTE OF MEDICAL SCIENCES",
+      location: "JAMAICA",
+      focus: "Structured Caribbean MD pathway with a patient-focused training environment.",
+      img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1200&auto=format&fit=crop",
+      desc: "A strong option for students looking for an English-medium Caribbean medical route with guided academic progression, foundational sciences, and early clinical orientation.",
+      highlights: [
+        "Small-batch academic attention",
+        "English-medium medical teaching",
+        "Clinical exposure planning support",
+        "Suitable for USMLE-minded students"
+      ]
     },
     {
       id: "02",
-      name: "EUROPE",
-      focus: "Affordable European Standard Education",
-      img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop",
-      desc: "Study in culturally rich, technologically advanced European nations like Georgia, Poland, and Italy. Degrees are universally recognized, offering a strong foundation for both clinical practice and research.",
-      highlights: ["WHO & NMC Recognized", "State-of-the-Art Infrastructure", "Global Clinical Exposure", "Safe & Student-Friendly Environment"]
+      name: "XAVIER MEDICAL UNIVERSITY",
+      location: "ARUBA",
+      focus: "Modern island-campus learning with a globally mobile medical student profile.",
+      img: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=1200&auto=format&fit=crop",
+      desc: "Best suited for students who want a disciplined, medicine-first environment where strong faculty guidance, exam planning, and future licensure strategy matter from the beginning.",
+      highlights: [
+        "Career-oriented MD curriculum",
+        "International student community",
+        "Step-by-step academic mentoring",
+        "Clarity on transfer and progression"
+      ]
     },
     {
       id: "03",
-      name: "INDIA",
-      focus: "Expert Domestic Counseling",
-      img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop",
-      desc: "For those preferring to stay closer to home, we provide expert admission guidance for top medical colleges in India, ensuring you navigate the competitive landscape and cut-offs effectively.",
-      highlights: ["NRI Seat Assistance", "Counseling Updates", "Budget-Friendly Options", "End-to-End Admission Support"]
+      name: "ALL SAINTS MEDICAL UNIVERSITY",
+      location: "CARIBBEAN",
+      focus: "Affordable doctor-training pathway with emphasis on clinical preparation and continuity.",
+      img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop",
+      desc: "Ideal for families seeking a medical college option that balances affordability, supportive faculty interaction, and a realistic roadmap toward internship, licensing, and long-term practice goals.",
+      highlights: [
+        "Budget-aware admission planning",
+        "Medical college style environment",
+        "Clinical rotation guidance",
+        "Student support after onboarding"
+      ]
     }
   ];
 
-  const features = [
-    { title: "Transparent Fee Structure", desc: "No hidden costs. Complete clarity on tuition, hostel, and processing fees before you apply." },
-    { title: "NMC & WHO Approved", desc: "We only partner with universities recognized by major global medical councils." },
-    { title: "USMLE & PLAB Alignment", desc: "Curriculums designed to help you clear international licensing exams effortlessly." },
-    { title: "Clinical Rotations", desc: "Access to world-class teaching hospitals for hands-on clinical experience." }
+  const supportPillars = [
+    {
+      title: "Eligibility Screening",
+      desc: "We review NEET status, academics, transfer history, and your long-term country of practice before recommending any university shortlist."
+    },
+    {
+      title: "Recognition Clarity",
+      desc: "Our counseling highlights current recognition, licensure planning, and return-path considerations so families can make informed decisions."
+    },
+    {
+      title: "Budget Planning",
+      desc: "Tuition, hostel, travel, insurance, and living-cost expectations are mapped clearly to avoid last-minute financial surprises."
+    },
+    {
+      title: "Clinical Pathway Focus",
+      desc: "From pre-clinical years to clerkships and future exam planning, we help students choose a pathway that fits their career direction."
+    }
+  ];
+
+  const admissionFlow = [
+    {
+      step: "01",
+      title: "Profile Review",
+      desc: "Academic history, NEET status, country preference, and future licensing goals are evaluated before university mapping."
+    },
+    {
+      step: "02",
+      title: "University Match",
+      desc: "We shortlist the right-fit options including All American Institute of Medical Sciences, Xavier Medical University, and All Saints Medical University."
+    },
+    {
+      step: "03",
+      title: "Documentation & Visa",
+      desc: "Offer letter processing, financial paperwork, hostel support, and visa file preparation are handled with close follow-up."
+    },
+    {
+      step: "04",
+      title: "Pre-Departure Support",
+      desc: "Students receive onboarding help for travel, campus reporting, settling in, and planning for the academic routine ahead."
+    }
+  ];
+
+  const faqs = [
+    {
+      q: "Is NEET mandatory for students planning MBBS abroad?",
+      a: "For Indian students, NEET qualification is generally essential if the long-term plan includes licensing or practice eligibility back in India. Final compliance should always be checked against the latest NMC rules."
+    },
+    {
+      q: "Why are these three universities highlighted on this page?",
+      a: "They match your client brief and represent Caribbean-style medical pathways that families often consider when they want English-medium teaching, guided academics, and a practical route toward future licensing exams."
+    },
+    {
+      q: "Do you help compare tuition, hostel, and living costs?",
+      a: "Yes. We present the full admission picture with academic fit, budget planning, and expected living expenses so parents can compare options realistically instead of choosing only by brochure headlines."
+    },
+    {
+      q: "How do students decide the right university?",
+      a: "The best match depends on academic readiness, budget, preferred learning style, transfer flexibility, and where the student eventually wants to train or practice as a doctor."
+    }
   ];
 
   return (
     <main className="min-h-screen bg-white font-sans text-slate-900">
-      
-      {/* Hero Section */}
-      <section className="relative h-[75vh] w-full flex items-end pb-16 pt-32 overflow-hidden bg-slate-900">
+      <section className="relative flex min-h-[82vh] w-full items-end overflow-hidden bg-slate-950 pb-16 pt-32">
         <Image
-          src="https://images.unsplash.com/photo-1625134673337-519d4d10b313?q=80&w=1920&auto=format&fit=crop"
-          alt="MBBS in Central America and Europe"
+          src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?q=80&w=1920&auto=format&fit=crop"
+          alt="Doctors and medical students in a clinical setting"
           fill
-          className="object-cover opacity-60"
+          className="object-cover opacity-35"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
-        
-        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24">
-          <motion.span 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-blue-500 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
-          >
-            [ MEDICAL ADMISSIONS EXCELLENCE ]
-          </motion.span>
-          <motion.h1 
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.28),transparent_32%),linear-gradient(to_top,rgba(2,6,23,0.95),rgba(2,6,23,0.72),rgba(2,6,23,0.48))]" />
+
+        <div className="relative z-10 mx-auto flex w-full max-w-[1600px] flex-col gap-10 px-6 md:px-12 lg:px-24 xl:flex-row xl:items-end xl:justify-between">
+          <div className="max-w-4xl">
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-6 block text-[11px] font-semibold uppercase tracking-[0.15em] text-blue-400"
+            >
+              [ MBBS ADMISSIONS | MEDICAL UNIVERSITIES ]
+            </motion.span>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="max-w-5xl text-4xl font-medium uppercase leading-[1.05] tracking-tight text-white md:text-6xl lg:text-[72px]"
+            >
+              MBBS Abroad With
+              <br />
+              Real Medical College Guidance
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="mt-8 max-w-3xl text-[13px] font-medium leading-relaxed tracking-[0.14em] text-slate-200 uppercase md:text-[14px]"
+            >
+              Explore a more focused medical admissions page featuring All American Institute of Medical Sciences,
+              Xavier Medical University, and All Saints Medical University with stronger counseling, cleaner
+              comparison, and a premium doctor-first visual theme.
+            </motion.p>
+          </div>
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-[72px] font-medium leading-[1.1] text-white tracking-tight uppercase max-w-4xl"
+            transition={{ delay: 0.3 }}
+            className="grid max-w-xl grid-cols-2 gap-px overflow-hidden border border-white/10 bg-white/10 backdrop-blur-sm"
           >
-            Pursue MBBS<br />Abroad & In India
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mt-8 text-[13px] md:text-[15px] font-semibold tracking-wider text-gray-300 leading-relaxed max-w-2xl uppercase"
-          >
-            Exclusive opportunities to pursue your medical degree in Central America, Europe, and top institutions in India. Global recognition and premium education.
-          </motion.p>
+            {[
+              "Doctor-patient counseling visuals",
+              "Medical student focused storytelling",
+              "Stethoscope and hospital tone",
+              "University-led MBBS shortlisting"
+            ].map((item) => (
+              <div key={item} className="bg-slate-900/70 px-5 py-5">
+                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-200">{item}</p>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
-      {/* Regions Grid */}
-      <section className="relative py-32 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-b border-gray-200 bg-slate-50">
-        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-          <Image 
-            src="https://images.unsplash.com/photo-1628595351029-c2bf17511435?q=80&w=1920&auto=format&fit=crop" 
-            alt="Pattern background" 
-            fill 
-            className="object-cover opacity-[0.15] mix-blend-multiply" 
+      <section className="relative mx-auto max-w-[1600px] border-b border-gray-200 bg-slate-50 px-6 py-28 md:px-12 lg:px-24">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <Image
+            src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1920&auto=format&fit=crop"
+            alt="Medical texture background"
+            fill
+            className="object-cover opacity-[0.07] mix-blend-multiply"
           />
         </div>
-        
-        <div className="mb-20 relative z-10">
-          <motion.span 
+
+        <div className="relative z-10 mb-16 max-w-3xl">
+          <motion.span
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
+            className="mb-6 block text-[11px] font-semibold uppercase tracking-[0.15em] text-blue-600"
           >
-            [ DESTINATIONS ]
+            [ FEATURED UNIVERSITIES ]
           </motion.span>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase"
+            className="text-3xl font-medium uppercase leading-[1.08] tracking-tight text-slate-900 md:text-5xl lg:text-[56px]"
           >
-            Primary Study Regions
+            Medical Universities Families Actually Ask About
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="mt-6 max-w-2xl text-[13px] font-medium leading-relaxed tracking-[0.12em] text-gray-500 uppercase"
+          >
+            Richer university content, cleaner comparison blocks, and a more trustworthy counseling tone for
+            serious medical aspirants.
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 border-t border-l border-gray-200 bg-white/80 backdrop-blur-sm">
-          {regions.map((region, idx) => (
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
+        <div className="relative z-10 grid grid-cols-1 gap-0 border-l border-t border-gray-200 bg-white/90 backdrop-blur-sm lg:grid-cols-3">
+          {universities.map((university, idx) => (
+            <motion.article
+              key={university.name}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              key={region.name} 
-              className="flex flex-col border-r border-b border-gray-200 p-10 hover:bg-gray-50 transition-colors duration-500 group relative"
+              transition={{ delay: idx * 0.08 }}
+              className="group flex flex-col border-b border-r border-gray-200 p-8 md:p-10"
             >
-              <div className="relative w-full h-[240px] mb-8 overflow-hidden rounded-sm">
-                <Image 
-                  src={region.img}
-                  alt={region.name}
+              <div className="relative mb-8 h-[250px] overflow-hidden rounded-sm">
+                <Image
+                  src={university.img}
+                  alt={university.name}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/10 to-transparent" />
+                <div className="absolute left-5 top-5 text-5xl font-light text-white/80">{university.id}</div>
+                <div className="absolute bottom-5 left-5">
+                  <span className="inline-flex border border-white/20 bg-white/10 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-white backdrop-blur-sm">
+                    {university.location}
+                  </span>
+                </div>
               </div>
-              <div className="text-5xl md:text-6xl font-light text-slate-200 mb-8 transition-colors duration-500 group-hover:text-blue-600">
-                {region.id}
-              </div>
-              <h3 className="text-2xl font-medium tracking-tight uppercase text-slate-900 mb-2">
-                {region.name}
+
+              <h3 className="mb-4 text-2xl font-medium uppercase leading-tight tracking-tight text-slate-900">
+                {university.name}
               </h3>
-              <span className="text-[10px] font-bold tracking-[0.15em] uppercase text-blue-600 mb-6 block">
-                {region.focus}
-              </span>
-              <p className="text-[12px] text-gray-500 font-medium leading-relaxed tracking-wide mb-10 h-[100px]">
-                {region.desc}
+              <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.18em] text-blue-600">
+                {university.focus}
+              </p>
+              <p className="mb-8 flex-1 text-[13px] font-medium leading-relaxed text-gray-600">
+                {university.desc}
               </p>
 
-              <div className="mt-auto pt-8 border-t border-gray-200">
-                <span className="text-slate-900 font-semibold tracking-[0.15em] uppercase text-[10px] block mb-4">
-                  KEY ADVANTAGES
+              <div className="border-t border-gray-200 pt-6">
+                <span className="mb-4 block text-[10px] font-bold uppercase tracking-[0.18em] text-slate-900">
+                  Key Counseling Notes
                 </span>
                 <ul className="space-y-3">
-                  {region.highlights.map((req, i) => (
-                    <li key={i} className="flex items-start text-[11px] font-bold text-gray-500 uppercase tracking-wider">
-                      <span className="text-blue-600 mr-3">■</span>
-                      {req}
+                  {university.highlights.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start text-[11px] font-bold uppercase tracking-[0.14em] text-gray-500"
+                    >
+                      <span className="mr-3 text-blue-600">■</span>
+                      {item}
                     </li>
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
+        </div>
+
+        <div className="relative z-10 mt-8 border border-blue-100 bg-blue-50 px-6 py-5">
+          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-blue-900">
+            Important: Final eligibility, recognition, internship route, and return-to-India compliance depend on
+            the latest rules in force at the time of application and licensing.
+          </p>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="relative py-32 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto bg-slate-900 text-white">
-        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-          <Image 
-            src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1920&auto=format&fit=crop" 
-            alt="Pattern background dark" 
-            fill 
-            className="object-cover opacity-20" 
+      <section className="mx-auto grid max-w-[1600px] grid-cols-1 border-b border-gray-200 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="relative min-h-[620px] overflow-hidden bg-slate-950">
+          <Image
+            src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1600&auto=format&fit=crop"
+            alt="Doctor consulting a patient in a hospital"
+            fill
+            className="object-cover opacity-70"
           />
-        </div>
-        <div className="flex flex-col lg:flex-row gap-16 relative z-10">
-          <div className="w-full lg:w-1/2">
-            <motion.span 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="text-blue-400 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block"
-            >
-              [ THE SAMEDUCATION ADVANTAGE ]
-            </motion.span>
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase mb-10 text-white"
-            >
-              18 Years of Medical Admissions Success
-            </motion.h2>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <div className="border-l border-slate-700 pl-6">
-                <div className="text-4xl font-light text-white mb-2">31k+</div>
-                <div className="text-[10px] font-bold tracking-[0.15em] uppercase text-slate-400">Successful Placements</div>
-              </div>
-              <div className="border-l border-slate-700 pl-6">
-                <div className="text-4xl font-light text-white mb-2">600+</div>
-                <div className="text-[10px] font-bold tracking-[0.15em] uppercase text-slate-400">University Tie-Ups</div>
-              </div>
-              <div className="border-l border-slate-700 pl-6">
-                <div className="text-4xl font-light text-white mb-2">99%</div>
-                <div className="text-[10px] font-bold tracking-[0.15em] uppercase text-slate-400">Visa Success Rate</div>
-              </div>
-              <div className="border-l border-slate-700 pl-6">
-                <div className="text-4xl font-light text-white mb-2">350+</div>
-                <div className="text-[10px] font-bold tracking-[0.15em] uppercase text-slate-400">Expert Counselors</div>
-              </div>
-            </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/35 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 lg:p-16">
+            <span className="mb-5 block text-[11px] font-semibold uppercase tracking-[0.15em] text-blue-400">
+              [ WHY FAMILIES TRUST THE PROCESS ]
+            </span>
+            <h2 className="max-w-2xl text-3xl font-medium uppercase leading-[1.08] tracking-tight text-white md:text-5xl">
+              Strong Medical Counseling Before You Commit To A Seat
+            </h2>
+            <p className="mt-6 max-w-2xl text-[13px] font-medium leading-relaxed tracking-[0.12em] text-slate-300 uppercase">
+              This page now reads like a real medical admissions destination with doctor-patient energy, hospital
+              mood, and practical student guidance instead of generic study-abroad filler.
+            </p>
           </div>
+        </div>
 
-          <div className="w-full lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-slate-700">
-            {features.map((feature, idx) => (
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+        <div className="bg-white px-6 py-20 md:px-12 lg:px-16">
+          <motion.span
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="mb-6 block text-[11px] font-semibold uppercase tracking-[0.15em] text-blue-600"
+          >
+            [ SAMEDUCATION ADVANTAGE ]
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-10 text-3xl font-medium uppercase leading-[1.08] tracking-tight text-slate-900 md:text-5xl"
+          >
+            Better Medical Shortlisting.
+            <br />
+            Better Parent Confidence.
+          </motion.h2>
+
+          <div className="grid grid-cols-1 gap-0 border-l border-t border-gray-200">
+            {supportPillars.map((item, idx) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                key={idx} 
-                className="p-8 border-r border-b border-slate-700 hover:bg-slate-800 transition-colors duration-500 group bg-slate-900/50 backdrop-blur-sm"
+                transition={{ delay: idx * 0.08 }}
+                className="border-b border-r border-gray-200 p-6"
               >
-                <h3 className="text-sm font-bold tracking-widest uppercase mb-4 text-white group-hover:text-blue-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-[12px] text-slate-400 font-medium leading-relaxed tracking-wide">
-                  {feature.desc}
-                </p>
+                <h3 className="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-slate-900">{item.title}</h3>
+                <p className="text-[13px] font-medium leading-relaxed text-gray-600">{item.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+      <section className="relative mx-auto max-w-[1600px] bg-slate-900 px-6 py-28 text-white md:px-12 lg:px-24">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <Image
+            src="https://images.unsplash.com/photo-1512678080530-7760d81faba6?q=80&w=1920&auto=format&fit=crop"
+            alt="Stethoscope and hospital environment"
+            fill
+            className="object-cover opacity-15 mix-blend-screen"
+          />
+        </div>
 
-<section className="py-24 px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto border-t border-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block">
+        <div className="relative z-10 mb-16 max-w-3xl">
+          <motion.span
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="mb-6 block text-[11px] font-semibold uppercase tracking-[0.15em] text-blue-400"
+          >
+            [ ADMISSION FLOW ]
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl font-medium uppercase leading-[1.08] tracking-tight text-white md:text-5xl lg:text-[56px]"
+          >
+            How We Build The MBBS Admission Journey
+          </motion.h2>
+        </div>
+
+        <div className="relative z-10">
+          {admissionFlow.map((item, index) => (
+            <motion.div
+              key={item.step}
+              initial={{ opacity: 0, x: -24 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: index * 0.08 }}
+              className="group flex flex-col border-t border-slate-800 py-10 md:flex-row md:items-start md:gap-10"
+            >
+              <div className="mb-4 w-24 shrink-0 text-5xl font-light text-slate-600 md:mb-0 md:w-32 md:text-6xl group-hover:text-blue-400">
+                {item.step}
+              </div>
+              <div className="max-w-4xl">
+                <h3 className="mb-3 text-xl font-medium uppercase tracking-tight text-white md:text-3xl">
+                  {item.title}
+                </h3>
+                <p className="text-[13px] font-medium leading-relaxed tracking-[0.12em] text-slate-300 uppercase">
+                  {item.desc}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+          <div className="border-t border-slate-800" />
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1600px] border-t border-gray-200 px-6 py-24 md:px-12 lg:px-24">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-16 text-center">
+            <span className="mb-6 block text-[11px] font-semibold uppercase tracking-[0.15em] text-blue-600">
               [ KNOWLEDGE BASE ]
             </span>
-            <h2 className="text-3xl md:text-5xl font-medium tracking-tight uppercase text-slate-900 mb-4">
+            <h2 className="text-3xl font-medium uppercase tracking-tight text-slate-900 md:text-5xl">
               Frequently Asked Questions
             </h2>
           </div>
-          
+
           <div className="border-t border-gray-200">
-            {[
-              { q: "Is NEET mandatory for studying MBBS abroad?", a: "Yes, for Indian students, qualifying NEET is mandatory to study MBBS abroad if you intend to return and practice in India." },
-              { q: "Are the universities WHO recognized?", a: "Absolutely. We exclusively partner with universities that are recognized by WHO, WDOMS, and approved by the NMC (National Medical Commission)." },
-              { q: "What is the medium of instruction?", a: "All our partner universities in Central America and Europe offer the MBBS program entirely in English." },
-              { q: "Do you help with education loans?", a: "Yes, our documentation and finance team provides complete assistance in securing education loans from major Indian banks." }
-            ].map((faq, i) => (
-              <div key={i} className="py-8 border-b border-gray-200 hover:px-6 transition-all duration-300">
-                <h3 className="text-[13px] font-bold uppercase tracking-wider text-slate-900 mb-4">{faq.q}</h3>
-                <p className="text-[12px] text-gray-500 font-medium leading-relaxed tracking-wide">{faq.a}</p>
+            {faqs.map((faq) => (
+              <div key={faq.q} className="border-b border-gray-200 py-8 transition-all duration-300 hover:px-4">
+                <h3 className="mb-4 text-[13px] font-bold uppercase tracking-[0.14em] text-slate-900">{faq.q}</h3>
+                <p className="text-[13px] font-medium leading-relaxed text-gray-600">{faq.a}</p>
               </div>
             ))}
           </div>

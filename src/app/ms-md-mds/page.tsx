@@ -22,13 +22,13 @@ export default function MSMDMDSPage() {
       {/* Hero Section */}
       <section className="relative h-[75vh] w-full flex items-end pb-16 pt-32 overflow-hidden bg-slate-900">
         <Image
-          src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1920&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=1920&auto=format&fit=crop"
           alt="MS MD MDS"
           fill
-          className="object-cover opacity-60"
+          className="object-cover object-center opacity-75"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/25 to-transparent" />
         
         <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24">
           <motion.span 
@@ -106,11 +106,11 @@ export default function MSMDMDSPage() {
             </motion.p>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 border border-gray-200">
-              <div className="bg-white p-6 border-r border-gray-200 hover:bg-slate-900 hover:text-white transition-colors group">
+              <div className="bg-white p-6 border-b sm:border-b-0 sm:border-r border-gray-200 hover:bg-slate-900 hover:text-white transition-colors group">
                 <span className="block text-3xl font-light text-slate-900 group-hover:text-white mb-2">MD</span>
                 <span className="text-[9px] font-bold tracking-[0.15em] uppercase text-gray-500 group-hover:text-gray-400">Doctor of Medicine</span>
               </div>
-              <div className="bg-white p-6 border-r border-gray-200 hover:bg-slate-900 hover:text-white transition-colors group">
+              <div className="bg-white p-6 border-b sm:border-b-0 sm:border-r border-gray-200 hover:bg-slate-900 hover:text-white transition-colors group">
                 <span className="block text-3xl font-light text-slate-900 group-hover:text-white mb-2">MS</span>
                 <span className="text-[9px] font-bold tracking-[0.15em] uppercase text-gray-500 group-hover:text-gray-400">Master of Surgery</span>
               </div>
@@ -120,13 +120,14 @@ export default function MSMDMDSPage() {
               </div>
             </div>
           </div>
-          <div className="relative h-[600px] w-full bg-slate-100 overflow-hidden shadow-2xl">
+          <div className="relative min-h-[420px] lg:h-[620px] w-full bg-slate-100 overflow-hidden shadow-2xl rounded-sm">
             <Image
-              src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1200&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1551076805-e1869043e560?q=80&w=1400&auto=format&fit=crop"
               alt="Surgical Team"
               fill
-              className="object-cover transition-all duration-700 hover:scale-105"
+              className="object-cover object-center transition-all duration-700 hover:scale-105"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/25 via-transparent to-transparent" />
           </div>
         </div>
       </section>
@@ -169,16 +170,16 @@ export default function MSMDMDSPage() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
               key={i} 
-              className="relative h-[300px] bg-slate-900 border-r border-b border-gray-200 group cursor-pointer flex flex-col items-center justify-end text-center overflow-hidden"
+              className="relative h-[320px] bg-slate-900 border-r border-b border-gray-200 group cursor-pointer flex flex-col items-start justify-end text-left overflow-hidden"
             >
               <Image 
                 src={spec.img} 
                 alt={spec.title} 
                 fill 
-                className="object-cover opacity-50 grayscale group-hover:grayscale-0 group-hover:scale-110 group-hover:opacity-40 transition-all duration-700" 
+                className="object-cover object-center opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
-              <h4 className="relative z-10 text-[11px] font-bold tracking-[0.15em] uppercase text-white mb-8 px-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/15 to-transparent" />
+              <h4 className="relative z-10 text-[11px] font-bold tracking-[0.15em] uppercase text-white mb-8 px-6">
                 {spec.title}
               </h4>
             </motion.div>

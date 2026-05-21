@@ -78,8 +78,8 @@ export default function ContactPage() {
                   <option value="">Select a pathway</option>
                   <option value="nursing">Nursing (Canada/UK)</option>
                   <option value="mbbs">MBBS Abroad</option>
-                  <option value="pg-germany">Medical PG in Germany</option>
-                  <option value="ms-md">MS/MD/MDS</option>
+                  <option value="pg-germany">MS/MD/MDS in Germany</option>
+                  <option value="ms-md">Global MS/MD/MDS</option>
                   <option value="other">Other</option>
                 </select>
               </div>

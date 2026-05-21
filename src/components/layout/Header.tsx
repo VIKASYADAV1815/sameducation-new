@@ -25,8 +25,8 @@ export const Header = () => {
     { name: "HOME", path: "/" },
     { name: "NURSING (USA/CAN/AUS)", path: "/nursing" },
     { name: "MBBS ABROAD", path: "/mbbs" },
-    { name: "PG GERMANY", path: "/pg-germany" },
-    { name: "MS/MD/MDS", path: "/ms-md-mds" },
+    { name: "MS/MD/MDS IN GERMANY", path: "/pg-germany" },
+    { name: "GLOBAL MS/MD/MDS", path: "/ms-md-mds" },
     { name: "SERVICES", path: "/services" },
     { name: "CONTACT", path: "/contact" },
   ];

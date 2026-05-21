@@ -6,27 +6,30 @@ export const Study = () => {
   const pathways = [
     {
       id: "01",
-      title: "NURSING in AMERICA • CANADA • AUSTRALIA",
-      subtitle: "(M.Sc NURSING PATHWAYS)",
-      desc: "Comprehensive M.Sc Nursing programs in USA, Canada, and Australia. 2-year duration, eligibility: B.Sc Nursing with IELTS 7 Band. Explore top universities and colleges.",
-      img: "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=800&auto=format&fit=crop",
-      link: "/nursing"
+      title: "MS IN GERMANY",
+      subtitle: "(CLINICAL SPECIALIZATION PATHWAY)",
+      desc: "Understand the Germany medical route through recognition, hospital applications, medical German, and structured clinical progression.",
+      img: "https://images.unsplash.com/photo-1551076805-e1869043e560?q=80&w=1200&auto=format&fit=crop",
+      link: "/pg-germany",
+      points: ["Clinical hospital route", "Medical German focus", "Branch planning"]
     },
     {
       id: "02",
-      title: "MEDICAL PG",
-      subtitle: "(POSTGRADUATE EXCELLENCE)",
-      desc: "SPECIALIZE IN YOUR MEDICAL FIELD WITH FULL SUPPORT FOR YOUR POSTGRADUATE JOURNEY GLOBALLY.",
-      img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop",
-      link: "/pg-germany"
+      title: "APPROBATION ROADMAP",
+      subtitle: "(FSP • KP • LICENSING)",
+      desc: "See the practical Germany process from degree review and document preparation to FSP readiness, KP planning, and long-term licensing strategy.",
+      img: "https://images.unsplash.com/photo-1584516150909-c43483ee7932?q=80&w=1200&auto=format&fit=crop",
+      link: "/pg-germany",
+      points: ["Recognition-first planning", "FSP and interview prep", "Licensing clarity"]
     },
     {
       id: "03",
-      title: "DENTAL PG",
-      subtitle: "(ADVANCED DENTISTRY)",
-      desc: "TAKE YOUR DENTAL CAREER TO THE NEXT LEVEL WITH OUR SPECIALIZED POSTGRADUATE DENTAL PATHWAYS.",
-      img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop",
-      link: "/ms-md-mds"
+      title: "MBBS MEDICAL UNIVERSITIES",
+      subtitle: "(AAIMS • XAVIER • ALL SAINTS)",
+      desc: "Explore a cleaner MBBS pathway page featuring the specific medical universities your client asked to highlight with stronger counseling content.",
+      img: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?q=80&w=1200&auto=format&fit=crop",
+      link: "/mbbs",
+      points: ["University-focused shortlisting", "Budget and visa planning", "Parent-friendly clarity"]
     }
   ];
 
@@ -46,10 +49,10 @@ export const Study = () => {
         {/* Header */}
         <div className="text-center mb-24">
           <span className="text-blue-400 font-semibold tracking-[0.15em] uppercase text-[11px] mb-6 block">
-            [ KNOW YOUR OPTIONS ]
+            [ MEDICAL SPOTLIGHT ]
           </span>
           <h2 className="text-3xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] tracking-tight uppercase max-w-3xl mx-auto text-white">
-            Explore The Education Pathway That Fits You
+            Explore The Medical Pathway That Fits You
           </h2>
         </div>
 
@@ -91,22 +94,14 @@ export const Study = () => {
                   {item.desc}
                 </p>
                 
-                {item.id === "01" && (
-                  <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 border-l-2 border-blue-500 pl-4 py-2">
-                    <div>
-                      <h4 className="text-[10px] font-bold uppercase text-blue-400 mb-1">America</h4>
-                      <p className="text-[10px] text-slate-400 uppercase">3 Uni + 2 Colleges<br/>IELTS 7 | 2 Years</p>
+                <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 border-l-2 border-blue-500 pl-4 py-2">
+                  {item.points.map((point) => (
+                    <div key={point}>
+                      <h4 className="text-[10px] font-bold uppercase text-blue-400 mb-1">{point}</h4>
+                      <p className="text-[10px] text-slate-400 uppercase">Focused support with better medical positioning</p>
                     </div>
-                    <div>
-                      <h4 className="text-[10px] font-bold uppercase text-blue-400 mb-1">Canada</h4>
-                      <p className="text-[10px] text-slate-400 uppercase">3 Uni + 2 Colleges<br/>Same as USA | 2 Years</p>
-                    </div>
-                    <div>
-                      <h4 className="text-[10px] font-bold uppercase text-blue-400 mb-1">Australia</h4>
-                      <p className="text-[10px] text-slate-400 uppercase">3 Uni + 2 Colleges<br/>Same as CAN | 2 Years</p>
-                    </div>
-                  </div>
-                )}
+                  ))}
+                </div>
               </div>
 
               {/* Arrow */}

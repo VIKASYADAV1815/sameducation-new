@@ -76,11 +76,11 @@ export const Footer = () => {
             <div className="bg-white/40 backdrop-blur-sm p-4 rounded-lg border border-white/60 hover:bg-white/60 transition-all duration-300">
               <h4 className="text-gray-900 font-bold mb-6 uppercase tracking-wider text-[11px] flex items-center"><span className="w-1 h-4 bg-blue-700 rounded mr-2"></span>Study Pathways</h4>
               <ul className="space-y-3 text-[12px] font-medium tracking-wide">
-                <li><Link href="/pg-germany" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>Germany Bachelors/Masters</Link></li>
-                <li><Link href="/pg-germany" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>Germany AUSBILDUNG</Link></li>
-                <li><Link href="/pg-germany" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>Opportunity Card</Link></li>
+                <li><Link href="/pg-germany" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>MS / MD / MDS in Germany</Link></li>
+                <li><Link href="/pg-germany" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>Approbation Roadmap</Link></li>
+                <li><Link href="/pg-germany" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>FSP / KP Guidance</Link></li>
                 <li><Link href="/mbbs" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>MBBS Abroad</Link></li>
-                <li><Link href="/ms-md-mds" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>MS / MD / MDS</Link></li>
+                <li><Link href="/ms-md-mds" className="text-gray-700 hover:text-blue-700 transition-colors flex items-center"><span className="mr-2">→</span>Global MS / MD / MDS</Link></li>
               </ul>
             </div>
             <div className="bg-white/40 backdrop-blur-sm p-4 rounded-lg border border-white/60 hover:bg-white/60 transition-all duration-300">

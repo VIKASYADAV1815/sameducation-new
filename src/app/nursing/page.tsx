@@ -154,7 +154,7 @@ export default function NursingPage() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
               key={dest.country} 
-              className="flex flex-col border-r border-b border-gray-200 p-10 hover:bg-gray-50 transition-colors duration-500 group relative"
+              className="relative flex flex-col border-r border-b border-gray-200 p-8 xl:p-10 hover:bg-gray-50 transition-colors duration-500 group"
             >
               <div className="text-5xl md:text-6xl font-light text-slate-200 mb-8 transition-colors duration-500 group-hover:text-blue-600">
                 {dest.id}
@@ -162,7 +162,7 @@ export default function NursingPage() {
               <h3 className="text-2xl font-medium tracking-tight uppercase text-slate-900 mb-6">
                 {dest.country}
               </h3>
-              <p className="text-[12px] text-gray-500 font-medium leading-relaxed tracking-wide mb-10 h-[100px]">
+              <p className="text-[13px] text-gray-600 font-medium leading-relaxed mb-8">
                 {dest.desc}
               </p>
 
@@ -171,19 +171,19 @@ export default function NursingPage() {
                   <span className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[10px] block mb-1">
                     [ COMPENSATION ]
                   </span>
-                  <p className="text-[12px] font-bold text-slate-900 uppercase tracking-wider">{dest.salary}</p>
+                  <p className="text-[12px] font-bold text-slate-900 leading-relaxed">{dest.salary}</p>
                 </div>
                 <div>
                   <span className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[10px] block mb-1">
                     [ VISAS ]
                   </span>
-                  <p className="text-[12px] font-bold text-slate-900 uppercase tracking-wider">{dest.visa}</p>
+                  <p className="text-[12px] font-semibold text-slate-900 leading-relaxed">{dest.visa}</p>
                 </div>
                 <div>
                   <span className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[10px] block mb-1">
                     [ EXAMINATIONS ]
                   </span>
-                  <p className="text-[12px] font-bold text-slate-900 uppercase tracking-wider">{dest.exams}</p>
+                  <p className="text-[12px] font-semibold text-slate-900 leading-relaxed">{dest.exams}</p>
                 </div>
                 <div>
                   <span className="text-blue-600 font-semibold tracking-[0.15em] uppercase text-[10px] block mb-3">
@@ -191,7 +191,7 @@ export default function NursingPage() {
                   </span>
                   <div className="flex flex-wrap gap-2">
                     {dest.colleges.map((college, i) => (
-                      <span key={i} className="text-[10px] font-bold text-slate-700 uppercase tracking-wider border border-gray-200 px-3 py-1.5 bg-white shadow-sm">
+                      <span key={i} className="bg-white px-3 py-1.5 text-[10px] font-bold text-slate-700 border border-gray-200 shadow-sm">
                         {college}
                       </span>
                     ))}
@@ -205,7 +205,7 @@ export default function NursingPage() {
                 </span>
                 <ul className="space-y-3">
                   {dest.requirements.map((req, i) => (
-                    <li key={i} className="flex items-start text-[11px] font-bold text-gray-500 uppercase tracking-wider">
+                    <li key={i} className="flex items-start text-[11px] font-bold text-gray-600 leading-relaxed">
                       <span className="text-blue-600 mr-3">■</span>
                       {req}
                     </li>
@@ -213,7 +213,7 @@ export default function NursingPage() {
                 </ul>
               </div>
 
-              <div className="absolute top-10 right-10 text-gray-300 group-hover:text-blue-600 transition-colors">
+              <div className="hidden lg:block absolute top-8 right-8 text-gray-300 group-hover:text-blue-600 transition-colors">
                 <ArrowUpRight size={28} strokeWidth={1} />
               </div>
             </motion.div>

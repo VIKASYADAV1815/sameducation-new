@@ -9,7 +9,7 @@ export const FAQ = () => {
   const faqs = [
     {
       question: "What exact pathways does SAMEDUCATION support?",
-      answer: "We specialize in Nursing pathways for USA, Canada, and Australia, Germany (Bachelors/Masters, Ausbildung, Opportunity Card), MBBS in Central America, and MS/MD/MDS."
+      answer: "We specialize in Nursing pathways for USA, Canada, and Australia, MBBS medical universities abroad, and the Germany medical route for MS, MD, MDS, Approbation, FSP, and hospital applications."
     },
     {
       question: "What are the eligibility criteria for M.Sc Nursing abroad?",
